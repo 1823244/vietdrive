@@ -99,6 +99,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.TaxAccrual.TabularSection.Taxes.Attribute.CustomerOrder</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.TimeTracking.TabularSection.Operations.Attribute.Customer</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.WorkOrder.TabularSection.Works.Attribute.Customer</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Shipment.TabularSection.CustomerOrders.Attribute.CustomerOrder</xr:Item>
 			</Content>
 			<DefaultForm/>
 			<AuxiliaryForm/>

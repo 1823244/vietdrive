@@ -112,6 +112,7 @@
 				<v8:Type>cfg:DocumentRef.FixedAssetsWriteOff</v8:Type>
 				<v8:Type>cfg:CatalogRef.PlanningPeriods</v8:Type>
 				<v8:Type>cfg:DocumentRef.JobSheet</v8:Type>
+				<v8:Type>cfg:DocumentRef.Shipment</v8:Type>
 				<v8:Type>cfg:CatalogRef.Employees</v8:Type>
 				<v8:Type>cfg:DocumentRef.SupplierInvoiceForPayment</v8:Type>
 				<v8:Type>cfg:DocumentRef.AdditionalCosts</v8:Type>

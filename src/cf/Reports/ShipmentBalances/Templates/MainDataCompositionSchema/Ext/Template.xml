@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DeliveryTimePlan</dataPath>
+			<field>DeliveryTimePlan</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DocShipment</dataPath>
+			<field>DocShipment</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ShippingCarrier</dataPath>
+			<field>ShippingCarrier</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DeliveryTimeFact</dataPath>
+			<field>DeliveryTimeFact</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DocShipmentCnt</dataPath>
+			<field>DocShipmentCnt</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Shipment count</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BelatedCnt</dataPath>
+			<field>BelatedCnt</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Belated count</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	SubQuery.ShippingCarrier,
+	COUNT(SubQuery.DocShipment) AS DocShipmentCnt,
+	SUM(CASE
+			WHEN SubQuery.DeliveryTimeFact &gt; SubQuery.DeliveryTimePlan
+				THEN 1
+			ELSE 0
+		END) AS BelatedCnt
+FROM
+	(SELECT
+		DeliveryTimeCounter.ShippingCarrier AS ShippingCarrier,
+		DeliveryTimeCounter.DocShipment AS DocShipment,
+		SUM(DeliveryTimeCounter.DeliveryTimePlan) AS DeliveryTimePlan,
+		SUM(DeliveryTimeCounter.DeliveryTimeFact) AS DeliveryTimeFact
+	FROM
+		AccumulationRegister.DeliveryTimeCounter AS DeliveryTimeCounter
+	WHERE
+		DeliveryTimeCounter.Period BETWEEN &amp;StartDate AND &amp;FinishDate
+GROUP BY
+	DeliveryTimeCounter.ShippingCarrier,
+	DeliveryTimeCounter.DocShipment
+HAVING
+	SUM(DeliveryTimeCounter.DeliveryTimeFact) &gt; 0) AS SubQuery
+
+GROUP BY
+	SubQuery.ShippingCarrier</query>
+	</dataSet>
+	<totalField>
+		<dataPath>BelatedCnt</dataPath>
+		<expression>Sum(BelatedCnt)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>DocShipmentCnt</dataPath>
+		<expression>Sum(DocShipmentCnt)</expression>
+	</totalField>
+	<parameter>
+		<name>FinishDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Finish date</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.EndDate</expression>
+	</parameter>
+	<parameter>
+		<name>StartDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Start date</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.StartDate</expression>
+	</parameter>
+	<parameter>
+		<name>Period</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Default</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Default</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>UserFields.Field1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>BelatedPercent</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Case
+	When DocShipmentCnt = 0
+		Then 0
+	Else BelatedCnt / DocShipmentCnt
+End * 100</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Case
+	When [Shipment count] = 0
+		Then 0
+	Else [Belated count] / [Shipment count]
+End * 100</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Case
+	When DocShipmentCnt = 0
+		Then 0
+	Else BelatedCnt / DocShipmentCnt
+End * 100</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Case
+	When [Shipment count] = 0
+		Then 0
+	Else [Belated count] / [Shipment count]
+End * 100</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>DocShipmentCnt</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>BelatedCnt</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>UserFields.Field1</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Belated percent</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Period</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>850ddc59-6e1e-4646-b605-63350668e2bb</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ShippingCarrier</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

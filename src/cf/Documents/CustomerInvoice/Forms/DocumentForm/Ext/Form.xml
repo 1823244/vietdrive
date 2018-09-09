@@ -296,6 +296,13 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="DeliveryTimeFact" id="418">
+							<DataPath>Object.DeliveryTimeFact</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="DeliveryTimeFactContextMenu" id="419"/>
+							<ExtendedTooltip name="DeliveryTimeFactExtendedTooltip" id="420"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="RightColumn" id="11">

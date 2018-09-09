@@ -123,6 +123,12 @@
 		</Metadata>
 		<Metadata name="AccumulationRegister.CustomerOrders.ManagerModule" id="b9fd907f-6f64-47cc-9a66-8c235d72a73c.2" configVersion="11674b904747694aa48fb2a72933a86500000000"/>
 		<Metadata name="AccumulationRegister.CustomerOrders.RecordSetModule" id="b9fd907f-6f64-47cc-9a66-8c235d72a73c.1" configVersion="d4a36c560a00c94490e989c7cfd8744300000000"/>
+		<Metadata name="AccumulationRegister.DeliveryTimeCounter" id="9d07b690-c5a9-4b7d-8e72-c267ece93dc0" configVersion="abb460e53f95ad4d8aba6461938eba8400000000">
+			<Metadata name="AccumulationRegister.DeliveryTimeCounter.Dimension.DocShipment" id="02ac150e-1294-41a3-9e98-59c78dddfe09"/>
+			<Metadata name="AccumulationRegister.DeliveryTimeCounter.Resource.DeliveryTimeFact" id="35aad5d1-976a-47c1-b863-d630dd9ab8c2"/>
+			<Metadata name="AccumulationRegister.DeliveryTimeCounter.Dimension.ShippingCarrier" id="7be3d30b-277f-42d3-815b-8bc2e33720df"/>
+			<Metadata name="AccumulationRegister.DeliveryTimeCounter.Resource.DeliveryTimePlan" id="fe9a00c4-78f5-4c5b-bf96-33702d42aed4"/>
+		</Metadata>
 		<Metadata name="AccumulationRegister.FinancialResult" id="40261cb4-5832-4ecc-a4ad-f928fe8ea202" configVersion="a4c3ccbdf57c244b8db30cd05645a62700000000">
 			<Metadata name="AccumulationRegister.FinancialResult.Dimension.CustomerOrder" id="02213086-cb77-41b9-8d2b-ec2341588c18"/>
 			<Metadata name="AccumulationRegister.FinancialResult.Attribute.ContentOfAccountingRecord" id="374c5045-b7b4-4560-b506-435e92ff3de7"/>
@@ -978,6 +984,7 @@
 		<Metadata name="Catalog.Calendars.Help" id="1c09bf33-9b54-4bfd-bc92-e7324025fab0.1" configVersion="91e69859c70207499397ce60651c674000000000"/>
 		<Metadata name="Catalog.Calendars.ManagerModule" id="1c09bf33-9b54-4bfd-bc92-e7324025fab0.3" configVersion="c4a3039e9b20494cab26244e805fcc3b00000000"/>
 		<Metadata name="Catalog.Calendars.ObjectModule" id="1c09bf33-9b54-4bfd-bc92-e7324025fab0.0" configVersion="6c38216d331bc14d951b5e6a3bf1837e00000000"/>
+		<Metadata name="Catalog.Carriers" id="d63ca791-a854-47a8-8f93-9247630346d7" configVersion="e02fcf230e43594b87e3ceb011976f6200000000"/>
 		<Metadata name="Catalog.CashFlowItems" id="c18aed98-9a38-4a4f-bee4-1b6977344491" configVersion="8b0f3e6474ed764cbc1dd0d0f788dca200000000">
 			<Metadata name="Catalog.CashFlowItems.TabularSection.AdditionalAttributes.Attribute.Property" id="791cf8d9-4a06-4440-bd35-f8d371c2a78f"/>
 			<Metadata name="Catalog.CashFlowItems.TabularSection.AdditionalAttributes.Attribute.TextString" id="94595ccd-99b0-43e2-86b8-e6738c237357"/>
@@ -4390,7 +4397,7 @@
 		<Metadata name="CommonCommand.DeleteAnalysisReportPaymentCalendar.CommandModule" id="baa0f9da-2a73-4967-8d70-3bd3e0f62ebb.2" configVersion="ecd60738a9694f43ba8973282c8e701100000000"/>
 		<Metadata name="CommonCommand.DeleteAnalysisReportSales" id="242ceddb-9ddb-4321-9620-071650754467" configVersion="87442b8773eb0b4585c8abd22c14882500000000"/>
 		<Metadata name="CommonCommand.DeleteAnalysisReportSales.CommandModule" id="242ceddb-9ddb-4321-9620-071650754467.2" configVersion="3fa1be680720e14a9f0ede22c6ebaae700000000"/>
-		<Metadata name="CommonCommand.Dependencies" id="64a59186-ea83-44d7-b433-bf93778db6f9" configVersion="f02b4fa352d3bb4f9519b9d52ae2ffda00000000"/>
+		<Metadata name="CommonCommand.Dependencies" id="64a59186-ea83-44d7-b433-bf93778db6f9" configVersion="fddd66ff43e2604e8d0637137767a41200000000"/>
 		<Metadata name="CommonCommand.Dependencies.CommandModule" id="64a59186-ea83-44d7-b433-bf93778db6f9.2" configVersion="b02c661d2d799d4fbbd2e1284fc17ad600000000"/>
 		<Metadata name="CommonCommand.FilesInVolume" id="68229ecd-7ecc-4194-a3e5-f8df39b55d6a" configVersion="16d34467d61f7646bbfc68d3b09275ee00000000"/>
 		<Metadata name="CommonCommand.FilesInVolume.CommandModule" id="68229ecd-7ecc-4194-a3e5-f8df39b55d6a.2" configVersion="0729fc57c5ec804cb29351d434f815c700000000"/>
@@ -4408,7 +4415,7 @@
 		<Metadata name="CommonCommand.MessageExchange.CommandModule" id="b3152292-5546-4896-ad24-cb41057698d8.2" configVersion="9705a02d55957c428713b34d6854d20a00000000"/>
 		<Metadata name="CommonCommand.MessageExchangeSetting" id="1e63c656-a0e7-4b33-8bac-2a196e028ffa" configVersion="2ab3f61e1cbb434cb317c932e29027e700000000"/>
 		<Metadata name="CommonCommand.MessageExchangeSetting.CommandModule" id="1e63c656-a0e7-4b33-8bac-2a196e028ffa.2" configVersion="38110dedd060bb4fbe4cb5c08326bbd000000000"/>
-		<Metadata name="CommonCommand.ObjectAdditionalPrintForms" id="2baf6d7a-12ed-4f22-ad96-92bb31b747ff" configVersion="ae499f36dfba194b8cf4bb18a550488000000000"/>
+		<Metadata name="CommonCommand.ObjectAdditionalPrintForms" id="2baf6d7a-12ed-4f22-ad96-92bb31b747ff" configVersion="2f49c0766a1b8e44a15b47f22e526d6800000000"/>
 		<Metadata name="CommonCommand.ObjectAdditionalPrintForms.CommandModule" id="2baf6d7a-12ed-4f22-ad96-92bb31b747ff.2" configVersion="b27278fdbe88454f9f3c443f0e769b2f00000000"/>
 		<Metadata name="CommonCommand.ObjectFilling" id="fef727fa-f63b-4467-9367-73a2425b19e3" configVersion="ad5a37e8d4917e4fb2520c867428b50300000000"/>
 		<Metadata name="CommonCommand.ObjectFilling.CommandModule" id="fef727fa-f63b-4467-9367-73a2425b19e3.2" configVersion="1a0738fec3a7d042bdca5970d51dc25900000000"/>
@@ -5219,8 +5226,8 @@
 		<Metadata name="CommonModule.InfobaseUpdateGlobal.Module" id="b722d6e1-fd6f-4bb4-923d-01764393722d.0" configVersion="3f98c802fb5c7849aaa1ce6311bd493d00000000"/>
 		<Metadata name="CommonModule.InfobaseUpdateOverridable" id="f441907c-d02e-431e-baf4-1854e48a1f50" configVersion="26b353c6214f3841a53f7a5be9cdaf6100000000"/>
 		<Metadata name="CommonModule.InfobaseUpdateOverridable.Module" id="f441907c-d02e-431e-baf4-1854e48a1f50.0" configVersion="449b13c951e571479f61520a5d73a5eb00000000"/>
-		<Metadata name="CommonModule.InfobaseUpdateSB" id="e93e031a-54db-4eea-a1a7-a7f7432afc83" configVersion="e9546ef0dc373541b85a5e00708b4b6a00000000"/>
-		<Metadata name="CommonModule.InfobaseUpdateSB.Module" id="e93e031a-54db-4eea-a1a7-a7f7432afc83.0" configVersion="c935a1af8670054dbbdc858772e30c5b00000000"/>
+		<Metadata name="CommonModule.InfobaseUpdateSB" id="e93e031a-54db-4eea-a1a7-a7f7432afc83" configVersion="0ef84e26625fa548849ddf5c53850feb00000000"/>
+		<Metadata name="CommonModule.InfobaseUpdateSB.Module" id="e93e031a-54db-4eea-a1a7-a7f7432afc83.0" configVersion="15baca4fd2ea814ea78e1d18bbf57fbb00000000"/>
 		<Metadata name="CommonModule.InfobaseUpdateSSL" id="57a030fb-ed57-4ffc-a462-c7bbd2435c3d" configVersion="b0a1df893e49b8468db83e7aeba11a6700000000"/>
 		<Metadata name="CommonModule.InfobaseUpdateSSL.Module" id="57a030fb-ed57-4ffc-a462-c7bbd2435c3d.0" configVersion="07d97066fae3614f876968bf757a642f00000000"/>
 		<Metadata name="CommonModule.InfobaseUpdateSTL" id="aa1ed063-3ef3-43de-8ff6-de947f8fa2f4" configVersion="27ce0fd1abecb645afe5d0721e4ac57600000000"/>
@@ -5573,8 +5580,8 @@
 		<Metadata name="CommonModule.SmallBusinessReportsClient.Module" id="1a94ca73-daff-4b3d-8804-7c14793c88a7.0" configVersion="e30d73a7333eb441bef44f26d3672acf00000000"/>
 		<Metadata name="CommonModule.SmallBusinessReportsServerCall" id="4755f7c5-26e7-420c-ad79-b7fdb6362f15" configVersion="59f9b0f6409dd349857767b387dcf6c100000000"/>
 		<Metadata name="CommonModule.SmallBusinessReportsServerCall.Module" id="4755f7c5-26e7-420c-ad79-b7fdb6362f15.0" configVersion="9572758d3377954695a11ec3bc2ac28a00000000"/>
-		<Metadata name="CommonModule.SmallBusinessServer" id="496224d2-9b90-4c5a-8c4e-fd52ebd0ccfb" configVersion="c18945cc6e38aa46a1a1097787c43f7400000000"/>
-		<Metadata name="CommonModule.SmallBusinessServer.Module" id="496224d2-9b90-4c5a-8c4e-fd52ebd0ccfb.0" configVersion="c26bd35349a1eb4baf6eea1a3347256d00000000"/>
+		<Metadata name="CommonModule.SmallBusinessServer" id="496224d2-9b90-4c5a-8c4e-fd52ebd0ccfb" configVersion="37314c82018acb4f987bf7c67b51084900000000"/>
+		<Metadata name="CommonModule.SmallBusinessServer.Module" id="496224d2-9b90-4c5a-8c4e-fd52ebd0ccfb.0" configVersion="410cac83512dde43bef988b3d34a522d00000000"/>
 		<Metadata name="CommonModule.StandardSubsystemsClient" id="8170a27d-45e9-48b1-860b-c2d9cc5961cd" configVersion="5b9d10a36da6a14f9b7896a1c46b4d2900000000"/>
 		<Metadata name="CommonModule.StandardSubsystemsClient.Module" id="8170a27d-45e9-48b1-860b-c2d9cc5961cd.0" configVersion="29461abaadf4cb4394399d1357e3df2600000000"/>
 		<Metadata name="CommonModule.StandardSubsystemsClientReUse" id="f1c08fed-f3db-4f72-8a8e-7c626b8cc130" configVersion="3a45c566c15e8d4e96b26b8473f34e9700000000"/>
@@ -6537,11 +6544,11 @@
 		<Metadata name="CommonTemplate.TWAINComponent.Template" id="56cd7aac-6b88-40e0-9624-ea43615ec5b5.0" configVersion="1adbb7f49c188e45a6057087b9c433ce00000000"/>
 		<Metadata name="CommonTemplate.TemplateDay" id="72259b3a-3717-4236-bdb8-f5c74941cd52" configVersion="35d957511ae6fd4ea21712f8421d9f1000000000"/>
 		<Metadata name="CommonTemplate.TemplateDay.Template" id="72259b3a-3717-4236-bdb8-f5c74941cd52.0" configVersion="9f3d01db47a3564fad7f98db07a199bb00000000"/>
-		<Metadata name="Configuration.Drive" id="109fe7ae-e748-4180-9e88-6bcf2ba6895e" configVersion="fa2d26843e9f2749a2312dbbc2cea40b00000000"/>
+		<Metadata name="Configuration.Drive" id="109fe7ae-e748-4180-9e88-6bcf2ba6895e" configVersion="6c5ee7a1525e514b8b406fe7182b905f00000000"/>
 		<Metadata name="Configuration.Drive.ClientApplicationInterface" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.b" configVersion="6ab92ea09a099b4c974317c635ac09e100000000"/>
 		<Metadata name="Configuration.Drive.CommandInterface" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.a" configVersion="9a2cfa3ddf01044faf2af3ec6a7a2fb500000000"/>
 		<Metadata name="Configuration.Drive.Help" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.3" configVersion="db3ff7900987a042ada3ce334ecef3c600000000"/>
-		<Metadata name="Configuration.Drive.HomePageWorkArea" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.8" configVersion="7e7e03a3bea5724db89954f86511f1aa00000000"/>
+		<Metadata name="Configuration.Drive.HomePageWorkArea" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.8" configVersion="1be2d9ae63e6e04ba9b195250089c8e000000000"/>
 		<Metadata name="Configuration.Drive.MainSectionCommandInterface" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.9" configVersion="d7705024cc3c144e8545d20278aeb0ee00000000"/>
 		<Metadata name="Configuration.Drive.MainSectionPicture" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.c" configVersion="d1cc3fc0d950654a87dd301f116ddabb00000000"/>
 		<Metadata name="Configuration.Drive.ManagedApplicationModule" id="2f8bb123-2aad-4271-9506-dbb17a84c9a7.6" configVersion="9b7181272d1ce14d8640f9054a104cc900000000"/>
@@ -9120,7 +9127,7 @@
 		<Metadata name="Document.CostAllocation.Help" id="9fa63c6a-85cc-4c14-bd9a-eb8a0a971893.1" configVersion="8af8938880cbbb40893ad615d34a4f7800000000"/>
 		<Metadata name="Document.CostAllocation.ManagerModule" id="9fa63c6a-85cc-4c14-bd9a-eb8a0a971893.2" configVersion="1cae8e1b5b7f1b4aa6e2402401b57f4400000000"/>
 		<Metadata name="Document.CostAllocation.ObjectModule" id="9fa63c6a-85cc-4c14-bd9a-eb8a0a971893.0" configVersion="61c6aef4bbf9884c935ca268b6f24a0d00000000"/>
-		<Metadata name="Document.CustomerInvoice" id="e557f2c9-6893-4523-9b13-07e678b2778a" configVersion="c967e437c9d021438c365e6f9d86b32200000000">
+		<Metadata name="Document.CustomerInvoice" id="e557f2c9-6893-4523-9b13-07e678b2778a" configVersion="3937e9fd639fe946a739095730c4933100000000">
 			<Metadata name="Document.CustomerInvoice.Attribute.Driver" id="06e1ced8-1604-4e0f-bf43-72ad120ee9fd"/>
 			<Metadata name="Document.CustomerInvoice.TabularSection.Inventory.Attribute.ProductsAndServices" id="0798bfcf-b366-4284-a413-2a2d3b5475b2"/>
 			<Metadata name="Document.CustomerInvoice.Attribute.DiscountCard" id="138bb45a-2bb0-4ae2-9778-b415eaeeca91"/>
@@ -9167,6 +9174,7 @@
 			<Metadata name="Document.CustomerInvoice.TabularSection.Inventory.Attribute.ConnectionKey" id="6e667ff2-b277-4727-b868-fbe65b48feec"/>
 			<Metadata name="Document.CustomerInvoice.Attribute.StampBase" id="6f78c021-c1ce-4d22-84c8-103e792ecb0c"/>
 			<Metadata name="Document.CustomerInvoice.Attribute.Consignor" id="725b5ff7-3a23-4889-aa23-9ecb18b3592e"/>
+			<Metadata name="Document.CustomerInvoice.Attribute.DeliveryTimeFact" id="7404bf54-5747-4d90-a550-0ab49ff134d3"/>
 			<Metadata name="Document.CustomerInvoice.Attribute.Head" id="7447cb48-c66a-4a30-9b0a-c0373fa3e577"/>
 			<Metadata name="Document.CustomerInvoice.TabularSection.AdditionalAttributes.Attribute.Property" id="7a275d03-7a90-42f1-b249-3e9c2694ed8a"/>
 			<Metadata name="Document.CustomerInvoice.TabularSection.Inventory.Attribute.Content" id="7d41686c-bae5-46bb-b613-22f20e31a31c"/>
@@ -9212,20 +9220,20 @@
 		<Metadata name="Document.CustomerInvoice.Command.OpenSalesInvoiceToReturn.CommandModule" id="b516b710-763f-468a-b796-9d89733672be.2" configVersion="c6c0d8b6cd03be40bf1b43a72150a55f00000000"/>
 		<Metadata name="Document.CustomerInvoice.Form.ChoiceForm" id="f9e607a4-cc65-4551-9132-2d0e437495f7" configVersion="9cf392c6a76a3c418d0f19a5c6683fb600000000"/>
 		<Metadata name="Document.CustomerInvoice.Form.ChoiceForm.Form" id="f9e607a4-cc65-4551-9132-2d0e437495f7.0" configVersion="62206cd203704d42a55573194cba29eb00000000"/>
-		<Metadata name="Document.CustomerInvoice.Form.DocumentForm" id="f2399716-997d-48c1-8d29-70d2ec17d5ff" configVersion="6cccf515b46f4d40b329009c8bd0ec9000000000"/>
-		<Metadata name="Document.CustomerInvoice.Form.DocumentForm.Form" id="f2399716-997d-48c1-8d29-70d2ec17d5ff.0" configVersion="46fe4f3573fcb44eb2ec8772d7497a7800000000"/>
+		<Metadata name="Document.CustomerInvoice.Form.DocumentForm" id="f2399716-997d-48c1-8d29-70d2ec17d5ff" configVersion="688228434122a94a92a2894e70ff9bc900000000"/>
+		<Metadata name="Document.CustomerInvoice.Form.DocumentForm.Form" id="f2399716-997d-48c1-8d29-70d2ec17d5ff.0" configVersion="21b096a49e5a6940ae248b7f21d1577500000000"/>
 		<Metadata name="Document.CustomerInvoice.Form.ListForm" id="9f0d1494-50e1-49b0-a98a-34fbba4713b2" configVersion="aa764a880d3fa64fb92e0dcd5affd41200000000"/>
 		<Metadata name="Document.CustomerInvoice.Form.ListForm.Form" id="9f0d1494-50e1-49b0-a98a-34fbba4713b2.0" configVersion="a5030093df9c4c4a8c740cfdfba0379f00000000"/>
 		<Metadata name="Document.CustomerInvoice.Help" id="e557f2c9-6893-4523-9b13-07e678b2778a.1" configVersion="e37ee21164470643a7e3c55efc74744900000000"/>
-		<Metadata name="Document.CustomerInvoice.ManagerModule" id="e557f2c9-6893-4523-9b13-07e678b2778a.2" configVersion="2952d4d97817b74da18d38317cad0e4200000000"/>
-		<Metadata name="Document.CustomerInvoice.ObjectModule" id="e557f2c9-6893-4523-9b13-07e678b2778a.0" configVersion="98f31a2b798a0b458f4619ecac072ff000000000"/>
+		<Metadata name="Document.CustomerInvoice.ManagerModule" id="e557f2c9-6893-4523-9b13-07e678b2778a.2" configVersion="5520990978083646932fb8a65d76f13500000000"/>
+		<Metadata name="Document.CustomerInvoice.ObjectModule" id="e557f2c9-6893-4523-9b13-07e678b2778a.0" configVersion="b05a15d488a028439b6a1f7ce265242600000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.LoadFromFileInventory" id="2256dd4a-3f64-4483-90f9-b0a8fc2ef512" configVersion="681464b569d92744b26b98d0a750fb4500000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.LoadFromFileInventory.Template" id="2256dd4a-3f64-4483-90f9-b0a8fc2ef512.0" configVersion="13ca20f6050410418d3c492d34b81eb000000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.PF_MXL_CompletionCertificate" id="62721ac1-e4f2-4df3-a847-c53f9c147a11" configVersion="adf406f63a89cd44961258e3ea41c98100000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.PF_MXL_CompletionCertificate.Template" id="62721ac1-e4f2-4df3-a847-c53f9c147a11.0" configVersion="d2f3c1ed1dbb994ebf619273816f616d00000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.PF_MXL_CustomerInvoice" id="2f3c36e3-f6c8-4535-b946-45a66f5a9e6f" configVersion="531697610020834ba4750b832bcc88b800000000"/>
 		<Metadata name="Document.CustomerInvoice.Template.PF_MXL_CustomerInvoice.Template" id="2f3c36e3-f6c8-4535-b946-45a66f5a9e6f.0" configVersion="63b9eaad4b36af4a89c7f9dab5d8a76100000000"/>
-		<Metadata name="Document.CustomerOrder" id="9133d1ee-54e6-4556-8f42-a94010c0b021" configVersion="5b3051cec595ef48bf145d868e4f317600000000">
+		<Metadata name="Document.CustomerOrder" id="9133d1ee-54e6-4556-8f42-a94010c0b021" configVersion="1e896ee7972acc48a8f3078f26dc066a00000000">
 			<Metadata name="Document.CustomerOrder.Attribute.UseConsumerMaterials" id="0450b49d-af68-4cfc-8ac7-8c4e2302b4e3"/>
 			<Metadata name="Document.CustomerOrder.TabularSection.SerialNumbersMaterials" id="0928c61d-7c9d-4f72-9abf-1863a5747803"/>
 			<Metadata name="Document.CustomerOrder.TabularSection.Inventory.Attribute.Characteristic" id="0aca9fa6-afb0-4514-962d-331ac296b043"/>
@@ -9394,8 +9402,8 @@
 		<Metadata name="Document.CustomerOrder.Form.ChoiceForm.Form" id="fb2ed976-3e73-41bc-b3b0-94943ccfcb51.0" configVersion="ff9bdaed1f548d40a76b42fb4362f84700000000"/>
 		<Metadata name="Document.CustomerOrder.Form.CounterpartyInformationForm" id="9173b375-1578-4f25-9334-1ddb41a49ac6" configVersion="55c662c432c57444a82493d25b448c6a00000000"/>
 		<Metadata name="Document.CustomerOrder.Form.CounterpartyInformationForm.Form" id="9173b375-1578-4f25-9334-1ddb41a49ac6.0" configVersion="b6dc6e9a7fd63c41bc0aa33a20c3f24b00000000"/>
-		<Metadata name="Document.CustomerOrder.Form.DocumentForm" id="ebb83fc7-27e0-4a96-8ec9-174b79894203" configVersion="73202b000648a441ab8b9b51fbb1409600000000"/>
-		<Metadata name="Document.CustomerOrder.Form.DocumentForm.Form" id="ebb83fc7-27e0-4a96-8ec9-174b79894203.0" configVersion="ea2433d3dd045149a11ac60fee26e4e000000000"/>
+		<Metadata name="Document.CustomerOrder.Form.DocumentForm" id="ebb83fc7-27e0-4a96-8ec9-174b79894203" configVersion="8f010a6bbe006b46b9b4ccd2b6ae5dc500000000"/>
+		<Metadata name="Document.CustomerOrder.Form.DocumentForm.Form" id="ebb83fc7-27e0-4a96-8ec9-174b79894203.0" configVersion="5fe81d700a33b047b1d9e70134e1963400000000"/>
 		<Metadata name="Document.CustomerOrder.Form.FormWorkOrder" id="0065cb41-3c92-4490-9208-bf7186786075" configVersion="3136dbf3876cad468a48984077fde47500000000"/>
 		<Metadata name="Document.CustomerOrder.Form.FormWorkOrder.Form" id="0065cb41-3c92-4490-9208-bf7186786075.0" configVersion="ff7ec9eae82953469763ee7d49a37b1100000000"/>
 		<Metadata name="Document.CustomerOrder.Form.ListForm" id="3cf24643-8e0b-4a35-9bfc-4d46314a9eac" configVersion="a5947075c3c37548aa440df4f185366b00000000"/>
@@ -9410,7 +9418,7 @@
 		<Metadata name="Document.CustomerOrder.Form.ShipmentDocumentsListForm" id="8f5a5878-fe67-4665-b886-ac1b30a9f4d1" configVersion="dfdf5b1a2f53094196befee3d98b321a00000000"/>
 		<Metadata name="Document.CustomerOrder.Form.ShipmentDocumentsListForm.Form" id="8f5a5878-fe67-4665-b886-ac1b30a9f4d1.0" configVersion="49da9c9dc2c04841b4bc92667b64072200000000"/>
 		<Metadata name="Document.CustomerOrder.Help" id="9133d1ee-54e6-4556-8f42-a94010c0b021.1" configVersion="1f4b149a46031d4c8367c8baa09c00d400000000"/>
-		<Metadata name="Document.CustomerOrder.ManagerModule" id="9133d1ee-54e6-4556-8f42-a94010c0b021.2" configVersion="3acc5d9f518559459075938fe6d2acf300000000"/>
+		<Metadata name="Document.CustomerOrder.ManagerModule" id="9133d1ee-54e6-4556-8f42-a94010c0b021.2" configVersion="6e62f9b210a0a94384046768e62dbad400000000"/>
 		<Metadata name="Document.CustomerOrder.ObjectModule" id="9133d1ee-54e6-4556-8f42-a94010c0b021.0" configVersion="95e43bb6a71c5a4c884e9ca31928503e00000000"/>
 		<Metadata name="Document.CustomerOrder.Template.CounterpartyInformation" id="f597467a-c11e-42a0-a7dc-4b9fc98fded6" configVersion="4f47d9d88e3d8843abc908a6041a7bc400000000"/>
 		<Metadata name="Document.CustomerOrder.Template.CounterpartyInformation.Template" id="f597467a-c11e-42a0-a7dc-4b9fc98fded6.0" configVersion="b66fe86d3853304da58ce5c365080a0100000000"/>
@@ -11426,6 +11434,25 @@
 		<Metadata name="Document.SettlementsReconciliation.Template.PF_MXL_SettlementsReconciliationAct.Template" id="834bf579-c1dd-4f43-8803-2b0ef70445a6.0" configVersion="0bb83f6a78051546861769470f9db85f00000000"/>
 		<Metadata name="Document.SettlementsReconciliation.Template.PF_MXL_SettlementsReconciliationActChecked" id="db3bc512-006c-4470-888c-afaef3f18f4f" configVersion="0d7bf0154b40104888e0e76ce9f3257d00000000"/>
 		<Metadata name="Document.SettlementsReconciliation.Template.PF_MXL_SettlementsReconciliationActChecked.Template" id="db3bc512-006c-4470-888c-afaef3f18f4f.0" configVersion="3e0148c592cd6145a6b2a62a86e3f3f200000000"/>
+		<Metadata name="Document.Shipment" id="d24a678c-f001-4c5c-8e90-3b056def5c3d" configVersion="f4600d900e56ba42b42c821f62932cb800000000">
+			<Metadata name="Document.Shipment.Attribute.Company" id="419fb6ca-c757-4a53-a0b6-84cb88b9a58a"/>
+			<Metadata name="Document.Shipment.Attribute.DestMap" id="44c0c54a-7992-47c7-a882-d846b2b94ace"/>
+			<Metadata name="Document.Shipment.TabularSection.CustomerOrders.Attribute.CustomerOrder" id="5989fc96-2351-481b-97a6-18f81fd777e0"/>
+			<Metadata name="Document.Shipment.Attribute.DeliveryTimePlan" id="64b02155-17c7-403e-879c-08f823337342"/>
+			<Metadata name="Document.Shipment.Attribute.BasisDocument" id="64d6916f-5a36-4b3d-8c63-f20cf4e41020"/>
+			<Metadata name="Document.Shipment.TabularSection.CustomerOrders" id="79caa052-962f-4054-924e-4c94816ed9d0"/>
+			<Metadata name="Document.Shipment.Attribute.ShippingCarrier" id="903e01fc-402d-41cc-bb6d-c9d96fc5a6e0"/>
+			<Metadata name="Document.Shipment.Attribute.Counterparty" id="c6e52cdc-ff4b-41b3-9bac-fc37762e1d04"/>
+			<Metadata name="Document.Shipment.Attribute.Address" id="ebab244d-5ef0-4f3e-8b3f-85a12f247a0c"/>
+		</Metadata>
+		<Metadata name="Document.Shipment.Form.DocumentForm" id="55d51acd-cf28-442b-bb40-4e9078a5b6bd" configVersion="fe84ad8b65a5e047b59a4a7f69d57e3c00000000"/>
+		<Metadata name="Document.Shipment.Form.DocumentForm.Form" id="55d51acd-cf28-442b-bb40-4e9078a5b6bd.0" configVersion="aabbc32f7ecef24c9969deefbf84250d00000000"/>
+		<Metadata name="Document.Shipment.Form.ListForm" id="1bcde9f1-f4a3-436d-9a6c-e99ff792ddbe" configVersion="c19ee94e0697f64b96b01a620f0ccd3b00000000"/>
+		<Metadata name="Document.Shipment.Form.ListForm.Form" id="1bcde9f1-f4a3-436d-9a6c-e99ff792ddbe.0" configVersion="185310bb4ca76b47a5360133fe4b98a900000000"/>
+		<Metadata name="Document.Shipment.ManagerModule" id="d24a678c-f001-4c5c-8e90-3b056def5c3d.2" configVersion="b789ce9d3e9a804da54670c4e55295f000000000"/>
+		<Metadata name="Document.Shipment.ObjectModule" id="d24a678c-f001-4c5c-8e90-3b056def5c3d.0" configVersion="04563c8fcb379940b819ceffee2cf09a00000000"/>
+		<Metadata name="Document.Shipment.Template.PF_MXL_ShipmentTemplate" id="2e057cfe-4790-4dd6-98a5-889b54782445" configVersion="7fad2d6098011c4bb54ef0481855571c00000000"/>
+		<Metadata name="Document.Shipment.Template.PF_MXL_ShipmentTemplate.Template" id="2e057cfe-4790-4dd6-98a5-889b54782445.0" configVersion="e455137297ea384eb755fe525a6e7dda00000000"/>
 		<Metadata name="Document.SubcontractorReport" id="f0930201-3979-4460-9c9b-8b009171e00d" configVersion="76c1fe07ff400e4a92de7dbef6abbcb500000000">
 			<Metadata name="Document.SubcontractorReport.Attribute.MeasurementUnit" id="09c4a4e2-efd2-423c-9748-6358f89b4c52"/>
 			<Metadata name="Document.SubcontractorReport.Attribute.Specification" id="0ac6e45c-b8bc-41c8-b0d6-7aeeef199b49"/>
@@ -13318,7 +13345,7 @@
 		<Metadata name="ExchangePlan.MessageExchange.Form.NodeForm.Form" id="e92ae368-0d7c-4fb7-b6d0-5ab63dc95a6a.0" configVersion="ae98ce3c7edfdc48bef193b528b54d7d00000000"/>
 		<Metadata name="ExchangePlan.MessageExchange.ManagerModule" id="0ce4c8a4-b20b-4550-bee3-f677e9ec64e9.3" configVersion="18ce0fd094b2ef4fb2b5c4ff66f43c6b00000000"/>
 		<Metadata name="ExchangePlan.MessageExchange.ObjectModule" id="0ce4c8a4-b20b-4550-bee3-f677e9ec64e9.2" configVersion="742d6a59c9cfe749a71a285c1ca66c1f00000000"/>
-		<Metadata name="FilterCriterion.CustomerOrderDocuments" id="2d4b06f0-0d49-4f76-bb3e-f09b02ac5222" configVersion="4ce48a1c96e8e64d9db61b1db7bc55bf00000000"/>
+		<Metadata name="FilterCriterion.CustomerOrderDocuments" id="2d4b06f0-0d49-4f76-bb3e-f09b02ac5222" configVersion="7dff25c2c0bdb246aed3de78bfae5bfa00000000"/>
 		<Metadata name="FilterCriterion.Dependencies" id="0eaf5cce-274c-4d51-9fae-446407325553" configVersion="c7a752d04d4f0844ab06eb0153659b4a00000000"/>
 		<Metadata name="FilterCriterion.DiscountCardsByCounterparty" id="32cb14c0-5f89-409f-b7cb-98f6584deaff" configVersion="3913ce08285d174ba1c58116cc00fa2c00000000"/>
 		<Metadata name="FilterCriterion.DiscountCardsByCounterparty.Form.ListForm" id="22309949-f9b4-466a-8087-883fb52783ed" configVersion="3b878e64313fb74c84112e3083e76aaa00000000"/>
@@ -13329,7 +13356,7 @@
 		<Metadata name="FilterCriterion.FilesInVolume.Form.ListForm.Form" id="bb29fa44-6772-4426-a0b8-422115e14288.0" configVersion="a5f5c30941a5dd46842d4507900d53ae00000000"/>
 		<Metadata name="FilterCriterion.InvoiceForPaymentDocuments" id="3a976fab-11a5-4622-a69c-d2dc4c4bad3a" configVersion="901a92578b689f4abde317c465ae295c00000000"/>
 		<Metadata name="FilterCriterion.PurchaseOrderDocuments" id="0376a0a3-ef99-41a1-9266-744b95d0c0ee" configVersion="df860cfd3dafce4891ae59df1a5bc01e00000000"/>
-		<Metadata name="FilterCriterion.RelatedDocuments" id="18bf6916-83cc-41e5-a35b-1489450ae632" configVersion="f940f5124023b142a3f4ff1efb02c51200000000"/>
+		<Metadata name="FilterCriterion.RelatedDocuments" id="18bf6916-83cc-41e5-a35b-1489450ae632" configVersion="25e85f14b0c42b45aaed7885b70af42100000000"/>
 		<Metadata name="FilterCriterion.SupplierInvoiceForPaymentDocuments" id="14567461-56e2-49da-b183-cc3dade6e3a2" configVersion="420344b0bc90a445a7a45ddffee775f000000000"/>
 		<Metadata name="FunctionalOption.AccountingByCells" id="60b37d99-7111-4583-8621-a068d9bf15e2" configVersion="aad788dd7a9f6545b406d28f4b13dd3f00000000"/>
 		<Metadata name="FunctionalOption.AccountingBySeveralBusinessActivities" id="97ebdad9-4d60-472c-8721-b777c9de3e7f" configVersion="0565176f5d7d6e42943861552451510900000000"/>
@@ -15351,6 +15378,9 @@
 		<Metadata name="Report.SheetByGoodsOnWarehousesInProductsAndServicesPrices.ObjectModule" id="8895bdde-c83c-4dc9-9082-7e8372b4a9b5.0" configVersion="7cf45d49f99b854095e25c2a30da7a8a00000000"/>
 		<Metadata name="Report.SheetByGoodsOnWarehousesInProductsAndServicesPrices.Template.MainDataCompositionSchema" id="3b9fe68b-3f0f-4935-a7be-b87e450ecb47" configVersion="3140f0e51da8b149a2f44e41c44d492300000000"/>
 		<Metadata name="Report.SheetByGoodsOnWarehousesInProductsAndServicesPrices.Template.MainDataCompositionSchema.Template" id="3b9fe68b-3f0f-4935-a7be-b87e450ecb47.0" configVersion="b80c4189ef877046abd4ac5eacb2618b00000000"/>
+		<Metadata name="Report.ShipmentBalances" id="fdcb3c32-08e6-4922-a8cd-1dd90f20d7f4" configVersion="c0816c5d7d90b445b318b8b75b16deab00000000"/>
+		<Metadata name="Report.ShipmentBalances.Template.MainDataCompositionSchema" id="cb78d284-2a24-4a22-8416-f94f6ba095df" configVersion="72f1957cbf0bf143a02e054af917420500000000"/>
+		<Metadata name="Report.ShipmentBalances.Template.MainDataCompositionSchema.Template" id="cb78d284-2a24-4a22-8416-f94f6ba095df.0" configVersion="72c72137b87b2841af7a80669322be7000000000"/>
 		<Metadata name="Report.StaffList" id="0d6f0aba-7122-4a83-b9ec-dd91c4c01178" configVersion="1894af6431d1624e819e71232701b2cb00000000"/>
 		<Metadata name="Report.StaffList.Help" id="0d6f0aba-7122-4a83-b9ec-dd91c4c01178.1" configVersion="9f4b50730663194ba22cf6a26bdaa48900000000"/>
 		<Metadata name="Report.StaffList.ManagerModule" id="0d6f0aba-7122-4a83-b9ec-dd91c4c01178.2" configVersion="a4fb504dab1207479f1413fa0f86013500000000"/>
@@ -15831,7 +15861,7 @@
 		<Metadata name="Subsystem.Analysis.Subsystem.Warehouse" id="ee2617ff-4c8c-432c-930c-2c240bcfed56" configVersion="3630fe12296d504599938bfcf4a9ce4300000000"/>
 		<Metadata name="Subsystem.Analysis.Subsystem.Warehouse.CommandInterface" id="ee2617ff-4c8c-432c-930c-2c240bcfed56.1" configVersion="20c9b8d2b3c48e48b5d59850166a8cc900000000"/>
 		<Metadata name="Subsystem.AttachedFilesService" id="296455c0-2ed9-4062-9ac8-2db14925edb1" configVersion="26bc674658c8b84a8e1fb0e8aeba80e600000000"/>
-		<Metadata name="Subsystem.CRM" id="be230d9f-27a7-4f2a-b4e1-5e703bddaea8" configVersion="fac9e06ae0ab284494f679e46a6dc09400000000"/>
+		<Metadata name="Subsystem.CRM" id="be230d9f-27a7-4f2a-b4e1-5e703bddaea8" configVersion="0fb296d4b26fa745b72b0152388164c600000000"/>
 		<Metadata name="Subsystem.CRM.CommandInterface" id="be230d9f-27a7-4f2a-b4e1-5e703bddaea8.1" configVersion="a7b67ba3b040134a9fa4128b4ae8f5fc00000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.Analytics" id="f3112a45-6417-4c3a-8bca-559893729963" configVersion="1e8d50c6612a804ea97e6f4dba95ca5100000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.CRMSubsection" id="0667caf5-d0b6-4754-943e-9c90e475577c" configVersion="080e1fc30f62c44989f2f35043fcfad600000000"/>
@@ -15840,7 +15870,7 @@
 		<Metadata name="Subsystem.CRM.Subsystem.Events.CommandInterface" id="dd9aa5f9-7cef-4826-be33-17e1fde87411.1" configVersion="7ea8efff84b87247a6949b6ffb52214c00000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.OrdersAndInvoices" id="65712fa3-3cac-4e07-92c6-571fed66a8f7" configVersion="afe1e5da531f6245aa0c7984ee22435e00000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.OrdersAndInvoices.CommandInterface" id="65712fa3-3cac-4e07-92c6-571fed66a8f7.1" configVersion="3a8cb41f6b1eac4b96008a8092a87e9a00000000"/>
-		<Metadata name="Subsystem.CRM.Subsystem.Planning" id="3def93cb-db08-4f85-9ea4-913939de26de" configVersion="0b003adef44c2845b2a06f130b81bd9700000000"/>
+		<Metadata name="Subsystem.CRM.Subsystem.Planning" id="3def93cb-db08-4f85-9ea4-913939de26de" configVersion="5e5a99756517fa40a32d891f1f4befc000000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.ProductsAndServices" id="991b4096-c257-4c26-9033-1806fe276065" configVersion="dd386a011afebb498ac3e67a142bc95000000000"/>
 		<Metadata name="Subsystem.CRM.Subsystem.ProductsAndServices.CommandInterface" id="991b4096-c257-4c26-9033-1806fe276065.1" configVersion="1c7e68f80577a243a798a265c6904af100000000"/>
 		<Metadata name="Subsystem.DataImportFromExternalSources" id="0b463213-6f4f-4b31-b8ed-8357decf7b89" configVersion="649e8e13e3a90048941e43df4e6d429600000000"/>
@@ -15980,6 +16010,8 @@
 		<Metadata name="Subsystem.SetupAndAdministration.Subsystem.PersonalSettings.CommandInterface" id="e65c139e-08a9-46a5-860d-3927f6bc193c.1" configVersion="7e036c14910f9b4582fc82a75360c15600000000"/>
 		<Metadata name="Subsystem.SetupAndAdministration.Subsystem.SettingsAccounting" id="0380b2c0-f181-40dd-9198-0903e64e1330" configVersion="685515e642205343b0f7d3ec7e2b7f3400000000"/>
 		<Metadata name="Subsystem.SetupAndAdministration.Subsystem.SettingsAccounting.CommandInterface" id="0380b2c0-f181-40dd-9198-0903e64e1330.1" configVersion="136c516ce890b74aa1c59d98bd83e88000000000"/>
+		<Metadata name="Subsystem.Shipment" id="bbc2bac6-d352-445e-b487-1a72550d0f91" configVersion="7e03ebbe46ee804199beed224d9f743500000000"/>
+		<Metadata name="Subsystem.Shipment.CommandInterface" id="bbc2bac6-d352-445e-b487-1a72550d0f91.1" configVersion="46977158f6ff104eb59fbaee7e4cd21400000000"/>
 		<Metadata name="Subsystem.SmallBusinessObjectVersioning" id="382d3de4-d047-4e8e-b8ff-f709cf010bdb" configVersion="b1fee3b71f33094d8e30c05a0a5780e200000000"/>
 		<Metadata name="Subsystem.StandardSubsystems" id="0421b67e-ed26-491d-ab98-ec59002ed4ce" configVersion="d5277cdf6c18404d9e2a6e6be3938a4f00000000"/>
 		<Metadata name="Subsystem.StandardSubsystems.Subsystem.AccessManagement" id="1514eaff-faea-4d82-9465-d0d5292bb31d" configVersion="ba5c1605f7fbf14f8b435d38655e1b0c00000000"/>

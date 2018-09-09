@@ -60,6 +60,29 @@
 					</Button>
 				</ChildItems>
 			</ButtonGroup>
+			<ButtonGroup name="CommandBarCustomerOrder" id="1098">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Command bar of customer order</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель заказ покупателя</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Command bar of customer order</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель заказ покупателя</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="CommandBarCustomerOrderExtendedTooltip" id="1099"/>
+			</ButtonGroup>
 			<ButtonGroup name="GroupGlobalCommands" id="1278">
 				<Title>
 					<v8:item>
@@ -124,29 +147,6 @@
 						<ExtendedTooltip name="CommonCommandAdditionalInformationCommandBarExtendedTooltip" id="1281"/>
 					</Button>
 				</ChildItems>
-			</ButtonGroup>
-			<ButtonGroup name="CommandBarCustomerOrder" id="1098">
-				<Title>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Command bar of customer order</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Командная панель заказ покупателя</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Command bar of customer order</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Командная панель заказ покупателя</v8:content>
-					</v8:item>
-				</ToolTip>
-				<ExtendedTooltip name="CommandBarCustomerOrderExtendedTooltip" id="1099"/>
 			</ButtonGroup>
 			<Button name="FormDocumentSetting" id="472">
 				<Type>CommandBarButton</Type>

@@ -13,6 +13,7 @@ AccumulationRegisters\CashAssets.xml-->AccumulationRegisters\CashAssets.xml
 AccumulationRegisters\CashAssetsForecast.xml-->AccumulationRegisters\CashAssetsForecast.xml
 AccumulationRegisters\CashInCashRegisters.xml-->AccumulationRegisters\CashInCashRegisters.xml
 AccumulationRegisters\CustomerOrders.xml-->AccumulationRegisters\CustomerOrders.xml
+AccumulationRegisters\DeliveryTimeCounter.xml-->AccumulationRegisters\DeliveryTimeCounter.xml
 AccumulationRegisters\FinancialResult.xml-->AccumulationRegisters\FinancialResult.xml
 AccumulationRegisters\FinancialResultForecast.xml-->AccumulationRegisters\FinancialResultForecast.xml
 AccumulationRegisters\FixedAssets.xml-->AccumulationRegisters\FixedAssets.xml
@@ -114,6 +115,7 @@ Catalogs\BusinessActivities.xml-->Catalogs\BusinessActivities.xml
 Catalogs\BusinessCalendars.xml-->Catalogs\BusinessCalendars.xml
 Catalogs\CalculationsParameters.xml-->Catalogs\CalculationsParameters.xml
 Catalogs\Calendars.xml-->Catalogs\Calendars.xml
+Catalogs\Carriers.xml-->Catalogs\Carriers.xml
 Catalogs\CashFlowItems.xml-->Catalogs\CashFlowItems.xml
 Catalogs\CashOutflowPlanAttachedFiles.xml-->Catalogs\CashOutflowPlanAttachedFiles.xml
 Catalogs\CashRegisters.xml-->Catalogs\CashRegisters.xml
@@ -6993,6 +6995,7 @@ Documents\RetailReport.xml-->Documents\RetailReport.xml
 Documents\RetailRevaluation.xml-->Documents\RetailRevaluation.xml
 Documents\SalesTarget.xml-->Documents\SalesTarget.xml
 Documents\SettlementsReconciliation.xml-->Documents\SettlementsReconciliation.xml
+Documents\Shipment.xml-->Documents\Shipment.xml
 Documents\SubcontractorReport.xml-->Documents\SubcontractorReport.xml
 Documents\SupplierInvoice.xml-->Documents\SupplierInvoice.xml
 Documents\SupplierInvoiceForPayment.xml-->Documents\SupplierInvoiceForPayment.xml
@@ -7966,6 +7969,15 @@ Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationAc
 Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationActChecked.xml-->Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationActChecked.xml
 Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationAct\Ext\Template.xml-->Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationAct\Ext\Template.xml
 Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationActChecked\Ext\Template.xml-->Documents\SettlementsReconciliation\Templates\PF_MXL_SettlementsReconciliationActChecked\Ext\Template.xml
+Documents\Shipment\Ext\ManagerModule.bsl-->Documents\Shipment\Ext\ManagerModule.bsl
+Documents\Shipment\Ext\ObjectModule.bsl-->Documents\Shipment\Ext\ObjectModule.bsl
+Documents\Shipment\Forms\DocumentForm.xml-->Documents\Shipment\Forms\DocumentForm.xml
+Documents\Shipment\Forms\ListForm.xml-->Documents\Shipment\Forms\ListForm.xml
+Documents\Shipment\Forms\DocumentForm\Ext\Form.xml-->Documents\Shipment\Forms\DocumentForm\Ext\Form.xml
+Documents\Shipment\Forms\DocumentForm\Ext\Form\Module.bsl-->Documents\Shipment\Forms\DocumentForm\Ext\Form\Module.bsl
+Documents\Shipment\Forms\ListForm\Ext\Form.xml-->Documents\Shipment\Forms\ListForm\Ext\Form.xml
+Documents\Shipment\Templates\PF_MXL_ShipmentTemplate.xml-->Documents\Shipment\Templates\PF_MXL_ShipmentTemplate.xml
+Documents\Shipment\Templates\PF_MXL_ShipmentTemplate\Ext\Template.xml-->Documents\Shipment\Templates\PF_MXL_ShipmentTemplate\Ext\Template.xml
 Documents\SubcontractorReport\Ext\Help.xml-->Documents\SubcontractorReport\Ext\Help.xml
 Documents\SubcontractorReport\Ext\ManagerModule.bsl-->Documents\SubcontractorReport\Ext\ManagerModule.bsl
 Documents\SubcontractorReport\Ext\ObjectModule.bsl-->Documents\SubcontractorReport\Ext\ObjectModule.bsl
@@ -9169,6 +9181,7 @@ Reports\SerialNumbersRecords.xml-->Reports\SerialNumbersRecords.xml
 Reports\SerialNumbersWarehouse.xml-->Reports\SerialNumbersWarehouse.xml
 Reports\SettlementsOnOtherOperations.xml-->Reports\SettlementsOnOtherOperations.xml
 Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices.xml-->Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices.xml
+Reports\ShipmentBalances.xml-->Reports\ShipmentBalances.xml
 Reports\StaffList.xml-->Reports\StaffList.xml
 Reports\StandardBOM.xml-->Reports\StandardBOM.xml
 Reports\SupplierInvoiceForPaymentAnalysis.xml-->Reports\SupplierInvoiceForPaymentAnalysis.xml
@@ -9753,6 +9766,8 @@ Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Forms\ReportForm\Ext
 Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Forms\ReportForm\Ext\Form\Module.bsl-->Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Forms\ReportForm\Ext\Form\Module.bsl
 Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Templates\MainDataCompositionSchema.xml-->Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Templates\MainDataCompositionSchema.xml
 Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Templates\MainDataCompositionSchema\Ext\Template.xml-->Reports\SheetByGoodsOnWarehousesInProductsAndServicesPrices\Templates\MainDataCompositionSchema\Ext\Template.xml
+Reports\ShipmentBalances\Templates\MainDataCompositionSchema.xml-->Reports\ShipmentBalances\Templates\MainDataCompositionSchema.xml
+Reports\ShipmentBalances\Templates\MainDataCompositionSchema\Ext\Template.xml-->Reports\ShipmentBalances\Templates\MainDataCompositionSchema\Ext\Template.xml
 Reports\StaffList\Ext\Help.xml-->Reports\StaffList\Ext\Help.xml
 Reports\StaffList\Ext\ManagerModule.bsl-->Reports\StaffList\Ext\ManagerModule.bsl
 Reports\StaffList\Ext\ObjectModule.bsl-->Reports\StaffList\Ext\ObjectModule.bsl
@@ -10222,6 +10237,7 @@ Subsystems\ReferenceInformation.xml-->Subsystems\ReferenceInformation.xml
 Subsystems\Services.xml-->Subsystems\Services.xml
 Subsystems\ServiceTechnology.xml-->Subsystems\ServiceTechnology.xml
 Subsystems\SetupAndAdministration.xml-->Subsystems\SetupAndAdministration.xml
+Subsystems\Shipment.xml-->Subsystems\Shipment.xml
 Subsystems\SmallBusinessObjectVersioning.xml-->Subsystems\SmallBusinessObjectVersioning.xml
 Subsystems\StandardSubsystems.xml-->Subsystems\StandardSubsystems.xml
 Subsystems\Analysis\Ext\CommandInterface.xml-->Subsystems\Analysis\Ext\CommandInterface.xml
@@ -10389,6 +10405,7 @@ Subsystems\SetupAndAdministration\Subsystems\ApplicationSettings\Ext\CommandInte
 Subsystems\SetupAndAdministration\Subsystems\Integration\Ext\CommandInterface.xml-->Subsystems\SetupAndAdministration\Subsystems\Integration\Ext\CommandInterface.xml
 Subsystems\SetupAndAdministration\Subsystems\PersonalSettings\Ext\CommandInterface.xml-->Subsystems\SetupAndAdministration\Subsystems\PersonalSettings\Ext\CommandInterface.xml
 Subsystems\SetupAndAdministration\Subsystems\SettingsAccounting\Ext\CommandInterface.xml-->Subsystems\SetupAndAdministration\Subsystems\SettingsAccounting\Ext\CommandInterface.xml
+Subsystems\Shipment\Ext\CommandInterface.xml-->Subsystems\Shipment\Ext\CommandInterface.xml
 Subsystems\StandardSubsystems\Subsystems\AccessManagement.xml-->Subsystems\StandardSubsystems\Subsystems\AccessManagement.xml
 Subsystems\StandardSubsystems\Subsystems\AdditionalReportsAndDataProcessors.xml-->Subsystems\StandardSubsystems\Subsystems\AdditionalReportsAndDataProcessors.xml
 Subsystems\StandardSubsystems\Subsystems\ApplicationSettings.xml-->Subsystems\StandardSubsystems\Subsystems\ApplicationSettings.xml

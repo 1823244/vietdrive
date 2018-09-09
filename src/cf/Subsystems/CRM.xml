@@ -24,6 +24,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Segments</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.CustomerAcquisitionChannels</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.EventCollection</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.DeliveryTimeCounter</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

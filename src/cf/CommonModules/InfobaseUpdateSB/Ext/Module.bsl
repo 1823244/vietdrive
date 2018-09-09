@@ -28,7 +28,7 @@
 Procedure OnAddSubsystem(Definition) Export
 	
 	Definition.Name = "Drive";
-	Definition.Version = "1.0.0.5";
+	Definition.Version = "1.0.0.6";
 	
 EndProcedure
 

@@ -7613,3 +7613,30 @@ EndProcedure
 #EndRegion
 
 #EndIf
+
+Function FindShipment( CustormerOrderRef ) Export
+	
+	Query = New Query;
+	Query.Text = 
+		"SELECT
+		|	RelatedDocuments.Ref AS Shipment
+		|FROM
+		|	FilterCriterion.RelatedDocuments(&CustomerOrder) AS RelatedDocuments
+		|WHERE
+		|	RelatedDocuments.Ref REFS Document.Shipment";
+	
+	Query.SetParameter("CustomerOrder", CustormerOrderRef);
+	
+	QueryResult = Query.Execute();
+	
+	If QueryResult.IsEmpty() Then
+	
+		Return Undefined; //if there is no shipment for customer order the invoice is UNavailable for posting
+	
+	EndIf;
+	
+	RS = QueryResult.Select();
+	RS.Next();
+	Return RS.Shipment;
+	
+EndFunction

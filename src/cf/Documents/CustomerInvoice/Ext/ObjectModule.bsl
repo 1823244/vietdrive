@@ -1317,6 +1317,12 @@ EndProcedure // FillCheckProcessing()
 
 Procedure Posting(Cancel, PostingMode)
 	
+	If NOT CheckIfAvailableForPostingAccordingToShipment() Then
+		Cancel = True;
+		text = NStr("en='Error while posting Invoice: no Shipment for Customer order was found!';ru='Ошибка проведения инвойса: не найдено документа Shipment, связанного с CustomerOrder!'");
+		Raise text;
+	EndIf;	
+	
 	// Initialization of additional properties for document posting.
 	SmallBusinessServer.InitializeAdditionalPropertiesForPosting(Ref, AdditionalProperties);
 	
@@ -1361,6 +1367,9 @@ Procedure Posting(Cancel, PostingMode)
 	SmallBusinessServer.ReflectTheSerialNumbersOfTheGuarantee(AdditionalProperties, RegisterRecords, Cancel);
 	SmallBusinessServer.ReflectTheSerialNumbersBalance(AdditionalProperties, RegisterRecords, Cancel);
 
+	// DeliveryTime
+	SmallBusinessServer.ReflectDeliveryTimeCounter(AdditionalProperties, RegisterRecords, Cancel);
+	
 	// Record of the records sets.
 	PerformanceEstimationClientServer.StartTimeMeasurement("SalesInvoiceDocumentPostingMovementsRecord");
 	
@@ -1372,6 +1381,7 @@ Procedure Posting(Cancel, PostingMode)
 	Documents.CustomerInvoice.RunControl(Ref, AdditionalProperties, Cancel);
 	
 	AdditionalProperties.ForPosting.StructureTemporaryTables.TempTablesManager.Close();
+
 	
 EndProcedure // Posting()
 
@@ -1398,5 +1408,22 @@ Procedure OnCopy(CopiedObject)
 EndProcedure // OnCopy()
 
 #EndRegion
+
+// check availability of posting document
+Function CheckIfAvailableForPostingAccordingToShipment()
+	
+	If NOT ValueIsFilled(ThisObject.Order) Then
+	
+		Return True;//if there is no customer order the invoice is available for posting	
+	
+	EndIf;
+	
+	DocShipment = Documents.CustomerOrder.FindShipment( ThisObject.Order );
+	
+	Return DocShipment<>Undefined;
+	
+EndFunction
+
+
 
 #EndIf

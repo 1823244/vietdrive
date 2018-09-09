@@ -143,6 +143,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.TransferBetweenCells.Attribute.BasisDocument</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.WorkOrder.Attribute.Event</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.WorkOrder.TabularSection.Works.Attribute.Customer</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Shipment.TabularSection.CustomerOrders.Attribute.CustomerOrder</xr:Item>
 			</Content>
 			<DefaultForm/>
 			<AuxiliaryForm/>

@@ -11128,3 +11128,21 @@ Function GetQueryTextExchangeRateDifferencesAccountingForOtherOperations(TempTab
 EndFunction // GetQueryTextExchangeDifferenceAccountingForOtherOperations()
 
 #EndRegion
+
+
+// Moves on the register DeliveryTimeCounter
+//
+Procedure ReflectDeliveryTimeCounter(AdditionalProperties, RegisterRecords, Cancel) Export
+	
+	DeliveryTimeCounterTable = AdditionalProperties.TableForRegisterRecords.DeliveryTimeCounterTable;
+	
+	If Cancel
+	 OR DeliveryTimeCounterTable.Count() = 0 Then
+		Return;
+	EndIf;
+	
+	DeliveryTimeCounterMovements = RegisterRecords.DeliveryTimeCounter;
+	DeliveryTimeCounterMovements.Write = True;
+	DeliveryTimeCounterMovements.Load(DeliveryTimeCounterTable);
+	
+EndProcedure

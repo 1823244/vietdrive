@@ -78,6 +78,7 @@
 				<v8:Type>cfg:DocumentRef.InventoryReconciliation</v8:Type>
 				<v8:Type>cfg:DocumentRef.PaymentReceipt</v8:Type>
 				<v8:Type>cfg:DocumentRef.JobSheet</v8:Type>
+				<v8:Type>cfg:DocumentRef.Shipment</v8:Type>
 				<v8:Type>cfg:DocumentRef.SupplierInvoiceForPayment</v8:Type>
 				<v8:Type>cfg:DocumentRef.AdditionalCosts</v8:Type>
 				<v8:Type>cfg:DocumentRef.PayrollSheet</v8:Type>

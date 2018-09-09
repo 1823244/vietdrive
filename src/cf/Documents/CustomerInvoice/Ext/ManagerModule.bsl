@@ -2835,6 +2835,52 @@ Procedure GenerateTableManagerial(DocumentRefSalesInvoice, StructureAdditionalPr
 	
 EndProcedure // GenerateTableManagerial()
 
+
+// Generates values table creating data for posting by the DeliveryTimeCounter register.
+// Saves the tables of values in the properties of the structure "AdditionalProperties".
+//
+Procedure GenerateTableDeliveryTimeCounter(DocumentRefSalesInvoice, StructureAdditionalProperties)
+	
+	If NOT ValueIsFilled(DocumentRefSalesInvoice.DeliveryTimeFact) OR 
+		NOT ValueIsFilled(DocumentRefSalesInvoice.Order) Then
+		StructureAdditionalProperties.TableForRegisterRecords.Insert("DeliveryTimeCounterTable", New ValueTable);
+		Return;
+	EndIf;
+	
+	DocShipment = Documents.CustomerOrder.FindShipment( DocumentRefSalesInvoice.Order );
+	
+	Query = New Query;
+	Query.TempTablesManager = StructureAdditionalProperties.ForPosting.StructureTemporaryTables.TempTablesManager;
+	Query.Text =
+	"SELECT
+	|	TableInvoice.Date AS Period,
+	|	ShipTable.ShippingCarrier AS ShippingCarrier,
+	|	&DocShipment AS DocShipment,
+	|	0 AS DeliveryTimePlan,
+	|	TableInvoice.DeliveryTimeFact AS DeliveryTimeFact
+	|FROM
+	|	Document.CustomerInvoice AS TableInvoice
+	|		LEFT JOIN (SELECT
+	|			Shipment.Ref AS Ref,
+	|			Shipment.ShippingCarrier AS ShippingCarrier
+	|		FROM
+	|			Document.Shipment AS Shipment
+	|		WHERE
+	|			Shipment.Ref = &DocShipment) AS ShipTable
+	|		ON (TRUE)
+	|WHERE
+	|	TableInvoice.Ref = &Ref";
+	
+	Query.SetParameter("Ref", DocumentRefSalesInvoice);
+	Query.SetParameter("DocShipment", DocShipment);
+
+	QueryResult = Query.Execute();
+	
+	StructureAdditionalProperties.TableForRegisterRecords.Insert("DeliveryTimeCounterTable", QueryResult.Unload());
+	
+EndProcedure
+
+
 #Region DiscountCards
 
 // Generates values table creating data for posting by the SalesByDiscountCards register.
@@ -3331,7 +3377,9 @@ Procedure InitializeDocumentData(DocumentRefSalesInvoice, StructureAdditionalPro
 	GenerateTableManagerial(DocumentRefSalesInvoice, StructureAdditionalProperties);
 	
 	// Serial numbers
-	GenerateTableSerialNumbers(DocumentRefSalesInvoice, StructureAdditionalProperties);	
+	GenerateTableSerialNumbers(DocumentRefSalesInvoice, StructureAdditionalProperties);
+	
+	GenerateTableDeliveryTimeCounter(DocumentRefSalesInvoice, StructureAdditionalProperties);
 	
 EndProcedure // DocumentDataInitialization()
 
@@ -4566,3 +4614,4 @@ EndProcedure
 #EndRegion
 
 #EndIf
+

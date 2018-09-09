@@ -80,7 +80,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.SystemAdministrator</xr:Item>
 			</DefaultRoles>
 			<Vendor>1Ci (1C International)</Vendor>
-			<Version>1.0.0.5</Version>
+			<Version>1.0.0.6</Version>
 			<UpdateCatalogAddress>http://1c.com/</UpdateCatalogAddress>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>true</UseManagedFormInOrdinaryApplication>
@@ -351,6 +351,7 @@
 			<Language>Spanish</Language>
 			<Language>Turkish</Language>
 			<Language>Vietnamese</Language>
+			<Subsystem>Shipment</Subsystem>
 			<Subsystem>Analysis</Subsystem>
 			<Subsystem>AttachedFilesService</Subsystem>
 			<Subsystem>CRM</Subsystem>
@@ -2301,6 +2302,7 @@
 			<Catalog>Workplaces</Catalog>
 			<Catalog>WorkSchedules</Catalog>
 			<Catalog>WorldCountries</Catalog>
+			<Catalog>Carriers</Catalog>
 			<Document>AcceptanceCertificate</Document>
 			<Document>AdditionalCosts</Document>
 			<Document>AgentReport</Document>
@@ -2366,6 +2368,7 @@
 			<Document>TimeTracking</Document>
 			<Document>TransferBetweenCells</Document>
 			<Document>WorkOrder</Document>
+			<Document>Shipment</Document>
 			<DocumentJournal>BankDocuments</DocumentJournal>
 			<DocumentJournal>CashDocuments</DocumentJournal>
 			<DocumentJournal>CashExpenseDocuments</DocumentJournal>
@@ -2630,6 +2633,7 @@
 			<Report>Warehouse</Report>
 			<Report>WorkedTime</Report>
 			<Report>WorkOrders</Report>
+			<Report>ShipmentBalances</Report>
 			<DataProcessor>AccountingCorrectnessControl</DataProcessor>
 			<DataProcessor>ActiveUsers</DataProcessor>
 			<DataProcessor>AdministrationPaneIIntegrationSB</DataProcessor>
@@ -2893,6 +2897,7 @@
 			<AccumulationRegister>TaxesSettlements</AccumulationRegister>
 			<AccumulationRegister>Timesheet</AccumulationRegister>
 			<AccumulationRegister>WorkOrders</AccumulationRegister>
+			<AccumulationRegister>DeliveryTimeCounter</AccumulationRegister>
 			<ChartOfCharacteristicTypes>AdditionalAttributesAndInformation</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ChangingProhibitionDatesSections</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>DeleteAccessKinds</ChartOfCharacteristicTypes>
