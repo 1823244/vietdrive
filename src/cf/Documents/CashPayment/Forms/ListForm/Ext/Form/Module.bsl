@@ -1,0 +1,86 @@
+﻿#Region EventsHandlers
+
+&AtServer
+// Procedure - OnCreateAtServer event handler.
+//
+Procedure OnCreateAtServer(Cancel, StandardProcessing)
+	
+	// StandardSubsystems.ObjectVersioning
+	ObjectVersioning.OnCreateAtServer(ThisForm);
+	// End StandardSubsystems.ObjectVersioning
+	
+	// StandardSubsystems.AdditionalReportsAndDataProcessors
+	AdditionalReportsAndDataProcessors.OnCreateAtServer(ThisForm);
+	// End StandardSubsystems.AdditionalReportsAndDataProcessors
+	
+	// StandardSubsystems.Printing
+	PrintManagement.OnCreateAtServer(ThisForm, Items.ImportantCommandsGroup);
+	// End StandardSubsystems.Printing
+	
+	// Set the format for the current date: DF=H:mm
+	SmallBusinessServer.SetDesignDateColumn(List);
+	
+EndProcedure // OnCreateAtServer()
+
+// Procedure - form event handler "OnLoadDataFromSettingsAtServer".
+//
+&AtServer
+Procedure OnLoadDataFromSettingsAtServer(Settings)
+	
+	FilterCompany 		= Settings.Get("FilterCompany");
+	PettyCashFilter 				= Settings.Get("PettyCashFilter");
+	FilterTypeOperations 		= Settings.Get("FilterTypeOperations"); 
+	
+	SmallBusinessClientServer.SetListFilterItem(List, "Company", FilterCompany, ValueIsFilled(FilterCompany));
+	SmallBusinessClientServer.SetListFilterItem(List, "PettyCash", PettyCashFilter, ValueIsFilled(PettyCashFilter));
+	SmallBusinessClientServer.SetListFilterItem(List, "OperationKind", FilterTypeOperations, ValueIsFilled(FilterTypeOperations));
+	
+EndProcedure // OnLoadDataFromSettingsAtServer()
+
+&AtClient
+Procedure FilterCompanyOnChange(Item)
+	SmallBusinessClientServer.SetListFilterItem(List, "Company", FilterCompany, ValueIsFilled(FilterCompany));
+EndProcedure
+
+&AtClient
+Procedure FilterPettyCashOnChange(Item)
+	SmallBusinessClientServer.SetListFilterItem(List, "PettyCash", PettyCashFilter, ValueIsFilled(PettyCashFilter));
+EndProcedure
+
+&AtClient
+Procedure FilterOperationKindOnChange(Item)
+	SmallBusinessClientServer.SetListFilterItem(List, "OperationKind", FilterTypeOperations, ValueIsFilled(FilterTypeOperations));
+EndProcedure
+
+#EndRegion
+
+#Region PerformanceMeasurements
+
+&AtClient
+Procedure ListBeforeAddRow(Item, Cancel, Copy, Parent, Group)
+	
+	KeyOperation = "FormCreatingCashPayment";
+	PerformanceEstimationClientServer.StartTimeMeasurement(KeyOperation);
+	
+EndProcedure
+
+&AtClient
+Procedure ListBeforeRowChange(Item, Cancel)
+	
+	KeyOperation = "FormOpeningCashPayment";
+	PerformanceEstimationClientServer.StartTimeMeasurement(KeyOperation);
+	
+EndProcedure
+
+#EndRegion
+
+#Region LibrariesHandlers
+
+// StandardSubsystems.Printing
+&AtClient
+Procedure Attachable_ExecutePrintCommand(Command)
+	PrintManagementClient.ExecuteConnectedPrintCommand(Command, ThisObject, Items.List);
+EndProcedure
+// End StandardSubsystems.Printing
+
+#EndRegion

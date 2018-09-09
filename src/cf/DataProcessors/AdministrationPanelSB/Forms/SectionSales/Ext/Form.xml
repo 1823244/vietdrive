@@ -1,0 +1,1465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Sales</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Продажи</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupTitle" id="92">
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="230"/>
+			<ChildItems>
+				<LabelDecoration name="SectionDescription" id="93">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Configure accounting of company retail sales, POS terminals, customer order states, receipt and transfer of goods for commission.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка учета розничных продаж предприятия, эквайринговых терминалов, состояний заказов покупателей, приема и передачи товаров на комиссию.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<TitleHeight>2</TitleHeight>
+					<ContextMenu name="SectionDescriptionContextMenu" id="94"/>
+					<ExtendedTooltip name="SectionDescriptionExtendedTooltip" id="231"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="WEBApplication" id="303">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>WEB Application</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВЕБ приложение</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:FormTextColor</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Adoption of changes in the web client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятие изменений в веб-клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="WEBApplicationExtendedTooltip" id="304"/>
+			<ChildItems>
+				<Button name="UpdateSystemParameters" id="305">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.UpdateSystemParameters</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="RefreshSystemParametersExtendedTooltip" id="306">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>For the changes to enter into force, it is necessary to update the application parameters or to restart the application.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Для того, чтобы изменения вступили в силу, необходимо обновить параметры системы или перезапустить приложение.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<LabelDecoration name="DecorationProportion3" id="307">
+					<ContextMenu name="DecorationProportion3ContextMenu" id="308"/>
+					<ExtendedTooltip name="DecorationProportion3ExtendedTooltip" id="309"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsRetail" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Retail</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розница</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Retail</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розница</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingsRetailExtendedTooltip" id="241"/>
+			<ChildItems>
+				<UsualGroup name="Group9" id="310">
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group9ExtendedTooltip" id="311"/>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionAccountingRetail" id="107">
+							<DataPath>ConstantsSet.FunctionalOptionAccountingRetail</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<VerticalAlign>Center</VerticalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionAccountingRetailContextMenu" id="108"/>
+							<ExtendedTooltip name="FunctionalOptionAccountingRetailExtendedTooltip" id="243">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Keep records of retail sales in the application. If you enable this option, corresponding functions are added to the "Sales" section.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В программном продукте можно вести учет продаж в рознице. Включение этой опции добавляет соответствующий функционал в раздел "Продажи".</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionAccountingRetailOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="Decoration1" id="312">
+							<ContextMenu name="Decoration1ContextMenu" id="313"/>
+							<ExtendedTooltip name="Decoration1ExtendedTooltip" id="314"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group1" id="99">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group1ExtendedTooltip" id="242"/>
+					<ChildItems>
+						<UsualGroup name="GroupArchiveCRReceiptsOnCloseCashCRSession" id="113">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group archive retail receipts on register shift closing</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа архивировать чеки ККМПри закрытии кассовой смены</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group archive retail receipts on register shift closing</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа архивировать чеки ККМПри закрытии кассовой смены</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ArchiveCRReceiptsOnCloseCashCRSessionExtendedTooltip" id="246">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>When closing a cash register shift, all transactions formed by CR receipts will be moved to the retail sales report. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>При закрытии кассовой смены все движения, сформированные чеками ККМ, будут переноситься в отчет о розничных продажах при закрытии кассовой смены. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="ArchiveCRReceiptsOnCloseCashCRSession" id="114">
+									<DataPath>ConstantsSet.ArchiveCRReceiptsOnCloseCashCRSession</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Archive cash receipts</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Архивировать чеки ККМ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ArchiveCRReceiptsOnCloseCashCRSessionContextMenu" id="115"/>
+									<ExtendedTooltip name="ArchiveCRReceiptsOnCloseCashCRSessionExtendedTooltip" id="247">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When this option is enabled, all transactions generated by cash receipts will be transferred to the retail sales report when closing a register shift. Enable this option to significantly reduce the amount of data processed when the number of retail sales per day is high.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Архивировать чеки ККМ при закрытии кассовой смены".   При включении этой опции все движения, сформированные чеками ККМ, будут переноситься в отчет о розничных продажах при закрытии кассовой смены. Использование этой опции позволяет значительно уменьшить объем данных при большом количестве розничных продаж за день.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ArchiveCRReceiptsOnCloseCashCRSessionOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group13" id="355">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group13ExtendedTooltip" id="356"/>
+							<ChildItems>
+								<Button name="CatalogCashRegisters" id="128">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.CatalogCashRegisters</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="CatalogCashRegistersExtendedTooltip" id="259">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Go to the "Cash registers" catalog.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переход к справочнику касс ККМ.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingAccountingRetailSalesDetails" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Setting retail sales accounting details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка учет розничных продаж детали</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Setting retail sales accounting details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка учет розничных продаж детали</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingAccountingRetailSalesDescriptionExtendedTooltip" id="245"/>
+					<ChildItems>
+						<UsualGroup name="GroupDeleteNoPenetratedChecksOnCloseCashRegisterShifts" id="118">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group delete unissued receipts on closing register shift</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа удалять непробитые чеки при закрытии кассовой смены</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group delete unissued receipts on closing register shift</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа удалять непробитые чеки при закрытии кассовой смены</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupDeleteNotPunchedChecksOnCloseCashRegisterShiftsExtendedTooltip" id="250">
+								<Height>1</Height>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>All receipts that are not issued by the fiscal register will be deleted when closing the cash register shift. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>При закрытии кассовой смены все не пробитые на фискальном регистраторе чеки будут удаляться. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="DeleteUnissuedReceiptsOnCloseCashCRSession" id="119">
+									<DataPath>ConstantsSet.DeleteUnissuedReceiptsOnCloseCashCRSession</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Delete non-issued cash receipts</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалять непробитые чеки ККМ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DeleteNotPunchedChecksOnCloseCashChangeContextMenu" id="120"/>
+									<ExtendedTooltip name="DeleteNeprobityeChecksOnCloseCashChangeExtendedTooltip" id="251">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When this option is enabled, all receipts non-issued by fiscal data recorder will be deleted when closing the register shift. Using this option, you can significantly reduce the amount of data if the number of non-issued receipts per day is high.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Удалять непробитые чеки ККМ при закрытии кассовой смены".   При включении этой опции все непробитые на фискальном регистраторе чеки будут удаляться при закрытии кассовой смены. Использование этой опции позволяет уменьшить объем данных при большом количестве непробитых чеков за день.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">DeleteUnpinnedChecksOnCloseCashRegisterShiftsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group12" id="353">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group12ExtendedTooltip" id="354"/>
+							<ChildItems>
+								<Button name="CatalogPOSTerminals" id="129">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.CatalogPOSTerminals</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>POS terminals catalog</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Справочник "Эквайринговые терминалы"</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="CatalogPOSTerminalsExtendedTooltip" id="261">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Go to the "POS terminals" catalog.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переход к справочнику эквайринговых терминалов.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group2" id="100">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group2ExtendedTooltip" id="257"/>
+					<ChildItems>
+						<UsualGroup name="Group4" id="345">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group4ExtendedTooltip" id="346"/>
+							<ChildItems>
+								<CheckBoxField name="ControlBalancesDuringCreationCRReceipts" id="124">
+									<DataPath>ConstantsSet.ControlBalancesDuringCreationCRReceipts</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ControlBalancesDuringCreationCRReceiptsContextMenu" id="125"/>
+									<ExtendedTooltip name="ControlBalancesDuringCreationCRReceiptsExtendedTooltip" id="255">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to control balance when issuing cash receipts.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Опция подключает контроль остатков при пробитии чеков ККМ.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ControlBalancesDuringCreationCRReceiptsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsSalesDiscountsMarkups" id="318">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Discounts, markups</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидки, наценки</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingsSalesDiscountsMarkupsExtendedTooltip" id="319"/>
+			<ChildItems>
+				<UsualGroup name="Group7" id="320">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group7ExtendedTooltip" id="321"/>
+					<ChildItems>
+						<UsualGroup name="SettingsUseDiscountsMarkups" id="322">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use discounts markups</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать скидки наценки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use discounts markups</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать скидки наценки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseDiscountsMarkupsExtendedTooltip" id="323">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enables this option to specify discounts and markups to generate sales documents. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция добавляет возможность указывать скидки и наценки при формировании документов продаж. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseDiscountsMarkups" id="324">
+									<DataPath>ConstantsSet.FunctionalOptionUseDiscountsMarkups</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use discounts and markups</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать скидки и наценки</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseDiscountsMarkupsContextMenu" id="325"/>
+									<ExtendedTooltip name="FunctionalOptionUseDiscountsMarkupsExtendedTooltip" id="326">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>"Use discounts and markups in sales documents". The option allows you to use discounts and markups while generating the sales documents. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Использовать скидки и наценки в документах продаж".  Опция определяет возможность использования скидок и наценок при формировании документов продаж.  ВАЖНО!  Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseDiscountsMarkupsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsUseDiscountCards" id="327">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use discounts markups</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать скидки наценки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use discounts markups</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать скидки наценки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseDiscountCardsExtendedTooltip" id="328">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to use discount cards when generating documents of sales in retail sale and wholesale. To use this option, enable use of discounts and markups. For more information, see help.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция добавляет возможность использовать дисконтные карты при формировании документов продаж в оптовой и розничной торговле. Для использования опции необходимо разрешить использование скидок и наценок. Подробнее можно посмотреть в опциональной справке.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseDiscountCards" id="329">
+									<DataPath>ConstantsSet.FunctionalOptionUseDiscountCards</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use discount cards</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Функциональная опция использовать дисконтные карты</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseDiscountCardsContextMenu" id="330"/>
+									<ExtendedTooltip name="FunctionalOptionUseDiscountCardsExtendedTooltip" id="331">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to use discount cards while generating sales documents. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Использовать дисконтные карты".  Опция определяет возможность использования дисконтных карт при формировании документов продаж.  ВАЖНО!  Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionFunctionalOptionUseDiscountCardsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group10" id="332">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group10ExtendedTooltip" id="333"/>
+					<ChildItems>
+						<UsualGroup name="SettingsUseAutomaticDiscounts" id="334">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use automatic discounts</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать автоматические скидки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use automatic discounts</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать автоматические скидки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseAutomaticDiscountsExtendedTooltip" id="335">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to use automatic discounts and markups when generating sales documents. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция добавляет возможность использовать автоматические скидки и наценки при формировании документов продаж. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseAutomaticDiscounts" id="336">
+									<DataPath>ConstantsSet.FunctionalOptionUseAutomaticDiscountsMarkups</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use automatic discounts and markups</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать автоматические скидки и наценки</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseAutomaticDiscountsContextMenu" id="337"/>
+									<ExtendedTooltip name="FunctionalOptionUseAutomaticDiscountsExtendedTooltip" id="338">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to use automatic discounts and markups while generating the sales documents. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Использовать автоматические скидки и наценки в документах продаж".  Опция определяет возможность использования автоматических скидок и наценок при формировании документов продаж.  ВАЖНО!  Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseDiscountsMarkupsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Decoration3" id="339">
+							<ContextMenu name="Decoration3ContextMenu" id="340"/>
+							<ExtendedTooltip name="Decoration3ExtendedTooltip" id="341"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="CustomerOrdersSettings" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customer orders</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customer orders</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="CustomerOrdersSettingsExtendedTooltip" id="263"/>
+			<ChildItems>
+				<UsualGroup name="Group3" id="157">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group3ExtendedTooltip" id="264"/>
+					<ChildItems>
+						<UsualGroup name="Group5" id="347">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group5ExtendedTooltip" id="348"/>
+							<ChildItems>
+								<CheckBoxField name="UseCustomerOrderStates" id="141">
+									<DataPath>ConstantsSet.UseCustomerOrderStates</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Several customer order states</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Несколько состояний заказов покупателей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="CustomerOrdersStatusUsingContextMenu" id="142"/>
+									<ExtendedTooltip name="UseOfCustomerOrdersExtendedTooltip" id="265">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to use several states of customer orders (three or more). If this option is disabled, order states are edited in the attributes below.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Включение этой опции позволяет использовать несколько состояний для заказов покупателей (три и более). При выключенной опции состояния заказов редактируются в реквизитах ниже.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">UseCustomerOrderStatesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group6" id="349">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group6ExtendedTooltip" id="350"/>
+							<ChildItems>
+								<Button name="CatalogCustomerOrderStates" id="156">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.CatalogCustomerOrderStates</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="CatalogCustomerOrderStatusExtendedTooltip" id="275">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Go to the "Customer order states" catalog. Use the catalog to create arbitrary number of states of definite kinds. To go to the catalog, enable the "Several customer order states" option.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переход к справочнику состояний заказов покупателей. Справочник предназначен для самостоятельного создания произвольного количества состояний определенных видов. Для перехода к справочнику необходимо включить опцию "Несколько состояний заказов покупателей".</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="CustomerOrdersDefaultStatusSetting" id="162">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Default setup of customer order states</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка состояния заказов покупателй по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Default setup of customer order states</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка состояния заказов покупателй по умолчанию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingDefaultCustomerOrdersStatusExtendedTooltip" id="267"/>
+					<ChildItems>
+						<UsualGroup name="Stages" id="167">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>States</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояния</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>States</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояния</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="StagesExtendedTooltip" id="268"/>
+							<ChildItems>
+								<InputField name="InProcessStatus" id="168">
+									<DataPath>ConstantsSet.CustomerOrdersInProgressStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"In progress" state</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние "в работе"</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="InProcessStatusContextMenu" id="169"/>
+									<ExtendedTooltip name="StateAtWorkExtendedTooltip" id="270"/>
+									<Events>
+										<Event name="OnChange">InProcessStatusOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="CompletedStatus" id="171">
+									<DataPath>ConstantsSet.CustomerOrdersCompletedStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"Completed" state</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние "Выполнен"</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="CompletedStatusContextMenu" id="172"/>
+									<ExtendedTooltip name="StateCompletedExtendedTooltip" id="273"/>
+									<Events>
+										<Event name="OnChange">CompletedStatusOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsOfCommission" id="175">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commission trade</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссионная торговля</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commission trade</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссионная торговля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="CommissionSettingsExtendedTooltip" id="277"/>
+			<ChildItems>
+				<UsualGroup name="SettingsUseTransmissionToCommission" id="181">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings use goods transfer for commission</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки использовать передачу на комиссию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings use goods transfer for commission</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки использовать передачу на комиссию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsUseTransferToCommissionExtendedTooltip" id="279">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Enable this option to keep track of own product transfer for commission to the third party. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Опция включает возможность учитывать операции передачи собственных товаров на комиссию стороннему контрагенту. Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionTransferGoodsOnCommission" id="182">
+							<DataPath>ConstantsSet.FunctionalOptionTransferGoodsOnCommission</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Use goods transfer for commission</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать передачу товаров на комиссию</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionTransferGoodsOnCommissionContextMenu" id="183"/>
+							<ExtendedTooltip name="FunctionalOptionTransferGoodsOnCommissionExtendedTooltip" id="280">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to transfer own goods for commission to an external counterparty. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать передачу товаров на комиссию".   Опция определяет возможность передачи собственных товаров на комиссию стороннему контрагенту.  ВАЖНО!  Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionTransferGoodsOnCommissionOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingsUseReceptionForCommission" id="180">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings use acceptance for commission</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки использовать прием на комиссию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings use acceptance for commission</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки использовать прием на комиссию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsUseReceptionForCommissionExtendedTooltip" id="284">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Enable this option to keep accounts of goods receipt for commission from a third party. To use this option, allow to use products and services batches (see section Purchases). For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Опция включает возможность учитывать операции приема товаров на комиссию от стороннего контрагента. Для использования опции необходимо разрешить использование партий номенклатуры (см. раздел Закупки). Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionReceiveGoodsOnCommission" id="186">
+							<DataPath>ConstantsSet.FunctionalOptionReceiveGoodsOnCommission</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Use goods acceptance for commission</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать прием товаров на комиссию</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalProductsOnCommissionReceptionOptionContextMenu" id="187"/>
+							<ExtendedTooltip name="FunctionalOptionReceiveGoodsOnCommissionExtendedTooltip" id="285">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>"Use goods acceptance for commission". This option enables goods acceptance for commission from an external counterparty. IMPORTANT!  To ditinguish between own inventory and inventory accepted for commission, additional accounting dimension "Products and services batches" is used. That's why to use this option, it is nessesary to enable the "Inventory accounting by batches" option in the accounting settings in the "Purchases" section. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать прием товаров на комиссию".   При использовании этой опции добавляется возможность приема товаров на комиссию от стороннего контрагента.  ВАЖНО!  Для отличия собственных запасов от запасов, принятых на комиссию, используется дополнительный разрез учета - "Партии номенклатуры". Поэтому для использования опции необходимо в настройках учета, раздел "Закупки", включить опцию "Вести учет запасов в разрезе партий".  ВАЖНО!  Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionReceiveGoodsOnCommissionOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsSaleOther" id="194">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingsSaleOtherExtendedTooltip" id="288"/>
+			<ChildItems>
+				<UsualGroup name="Group8" id="215">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group8ExtendedTooltip" id="298"/>
+					<ChildItems>
+						<UsualGroup name="SettingsSaleOtherProjectManagement" id="209">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings sales other accounting by projects</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки продажи прочие учет по проектам</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings sales other accounting by projects</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки продажи прочие учет по проектам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsSaleOtheAccountingrProjectManagementExtendedTooltip" id="294">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Keep data about projects and combine customer orders in projects. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Хранить информацию о проектах и объединять заказы покупателей в проекты. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionAccountingByProjects" id="210">
+									<DataPath>ConstantsSet.FunctionalOptionAccountingByProjects</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Accounting by projects</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учет по проектам</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionAccountingByProjectsContextMenu" id="211"/>
+									<ExtendedTooltip name="FunctionalOptionAccountingByProjectsExtendedTooltip" id="295">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>&lt;b&gt; "Keep information about projects and combine customers orders in projects"&lt;/&gt;. 
+
+Option determines the ability to keep the projects list and to specify projects in customer orders allowing to combine several orders in one project.
+When specifying a project in the customer order, the document in fact becomes a specification to the contract with the customer, and defines the list of the supplied items under the contract (the list of goods, products, work, services), price, cost, and terms of delivery. Thus, taking into account the cost, income and expenses in terms of customer orders, you can get the aggregated data on costs, income and expenses, and data on the entire project.
+
+&lt;b&gt;&lt;color #008000&gt;EXAMPLE. &lt;/&gt;&lt;/&gt;
+For example the company "Breeze" won the tender for the design and mounting of ventilation and air conditioning system for a showroom in one of supermarkets. Two contracts have been concluded with the customer: contractor agreement for the airconditioning system design and mounting and equipment supply contract. It is important for a company to consider the costs, income and expenses both in terms of orders and business activities, and also in terms of a specific project in general. To do this, a new "Showroom" project was launched in the application and two orders were created: one is for the supply of equipment, second is to perform the work. Considering the costs, income and expenses for these orders, we can get data on the entire "Showroom" project also. </v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Хранить информацию о проектах и объединять заказы покупателей в проекты".   Опция определяет возможность ведения списка проектов и указания проектов в заказах покупателей, тем самым давая возможность объединения нескольких заказов в один проект. При указании проекта в заказе покупателя документ, фактически, становится спецификацией к договору с заказчиком и определяет список объектов поставки по договору (перечень товаров, продукции, работ, услуг), цену, стоимость и сроки поставки. Таким образом, учитывая затраты, доходы и расходы в разрезе заказов покупателей, можно получить агрегированную информацию о затратах, доходах и расходах и по проекту в целом.  ПРИМЕР.  Например, компания "Ветерок" выиграла тендер на разработку и установку системы вентиляции и кондиционирования торгового зала в одном из супермаркетов. С заказчиком было заключено два договора: договор подряда на проектирование и монтаж системы кондиционирования и договор на поставку оборудования. Для компании важно учитывать затраты, доходы и расходы как в разрезе заказов и видов деятельности, так и в целом по конкретному проекту. Для этого в программе открыли новый проект "Торговый зал", а так же два заказа: один на поставку оборудования, второй - на выполнение работ. Учитывая затраты, доходы и расход по этим заказам, мы можем получить информацию и в целом по проекту "Торговый зал". </v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingByProjectsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsCustomerPaymentDueDate" id="201">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings customer payment period</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки срок оплаты покупателя</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings customer payment period</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки срок оплаты покупателя</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsBuyersPaymentTermExtendedTooltip" id="299">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Parameter determines the period of delay of payment from the customer by default. To be specified in days. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Параметр определяет период отсрочки платежа от покупателя по умолчанию. Указывается в сутках Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="CustomerPaymentDueDate" id="202">
+									<DataPath>ConstantsSet.CustomerPaymentDueDate</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content> Receipt of payment from customer (in days)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> Поступление оплаты от покупателя (в сутках)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>6</Width>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="BuyersPaymentTermContextMenu" id="203"/>
+									<ExtendedTooltip name="BuyersPaymentTermExtendedTooltip" id="300">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Default payable deferral period in days. It is used to automatically insert counterparty into an agreement and determine a payment date during payment planning.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Срок поступления оплаты от покупателя (по умолчанию)".   Параметр определяет срок отсрочки платежа покупателю по умолчанию, в сутках. Он используется для автоматической подстановки в договор контрагента и для определения даты оплаты при планировании платежей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">CustomerPaymentDueDateOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ConstantsSet" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Constant set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ConstantsSet.VendorPaymentDueDate</Field>
+				<Field>ConstantsSet.UseCustomerOrderStates</Field>
+				<Field>ConstantsSet.SubsidiaryCompany</Field>
+				<Field>ConstantsSet.ProductsAndServicesSKUInContent</Field>
+				<Field>ConstantsSet.PriceListShowFullDescr.Ref</Field>
+				<Field>ConstantsSet.PriceListShowCode.Ref</Field>
+				<Field>ConstantsSet.PostponeEditProhibitionDate.Ref</Field>
+				<Field>ConstantsSet.OffsetAdvancesDebtsAutomatically.Ref</Field>
+				<Field>ConstantsSet.NationalCurrency</Field>
+				<Field>ConstantsSet.InfobaseUsageMode.Ref</Field>
+				<Field>ConstantsSet.FunctionalOptionUseBudgeting</Field>
+				<Field>ConstantsSet.FunctionalOptionUseBatches</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingRetail</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingCashMethodIncomeAndExpenses</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingByProjects</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingByCells</Field>
+				<Field>ConstantsSet.FunctionalCurrencyTransactionsAccounting</Field>
+				<Field>ConstantsSet.ExchangeRateDifferencesCalculationFrequency.Ref</Field>
+				<Field>ConstantsSet.DiscountsMarkupsSharedUsageOptions.Ref</Field>
+				<Field>ConstantsSet.DeleteContractControllingOnPosting.Ref</Field>
+				<Field>ConstantsSet.CustomerOrdersInProgressStatus</Field>
+				<Field>ConstantsSet.CustomerOrdersCompletedStatus</Field>
+				<Field>ConstantsSet.ControlBalancesOnPosting</Field>
+				<Field>ConstantsSet.ActivityKind.Ref</Field>
+				<Field>ConstantsSet.AccountingCurrency</Field>
+				<Field>ConstantsSet.AccountingBySubsidiaryCompany</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="RunMode" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run mode</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="CatalogCashRegisters" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cash registers catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник "Кассы ККМ"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the "Cash registers" catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник "Кассы ККМ"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogCashRegisters</Action>
+		</Command>
+		<Command name="CatalogCustomerOrderStates" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customer order states catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник "Состояния заказов покупателей"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the "Customer order states" catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник "Состояния заказов покупателей"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogCustomerOrderStates</Action>
+		</Command>
+		<Command name="CatalogPOSTerminals" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>POS terminals catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник "Эквайринговые терминалы"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the "POS terminals" catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник "Эквайринговые терминалы"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogPOSTerminals</Action>
+		</Command>
+		<Command name="UpdateSystemParameters" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить параметры системы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить параметры системы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>UpdateSystemParameters</Action>
+		</Command>
+	</Commands>
+</Form>

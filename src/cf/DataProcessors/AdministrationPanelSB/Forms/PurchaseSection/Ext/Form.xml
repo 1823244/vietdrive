@@ -1,0 +1,1618 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Purchases</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Закупки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupTitle" id="92">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="259"/>
+			<ChildItems>
+				<LabelDecoration name="SectionDescription" id="93">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Customize accounting details by inventory. Enable usage of several warehouses. Customize purchase order states, reservation and safe custody.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка детализации учета по запасам. Включение использования нескольких складов. Настройка состояний заказов поставщикам, резервирования и ответственного хранения.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<TitleHeight>2</TitleHeight>
+					<ContextMenu name="SectionDescriptionContextMenu" id="94"/>
+					<ExtendedTooltip name="SectionDescriptionExtendedTooltip" id="260"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="WEBApplication" id="345">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>WEB Application</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВЕБ приложение</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:FormTextColor</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Adoption of changes in the web client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятие изменений в веб-клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="WEBApplicationExtendedTooltip" id="346"/>
+			<ChildItems>
+				<Button name="UpdateSystemParameters" id="347">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.UpdateSystemParameters</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="RefreshSystemParametersExtendedTooltip" id="348">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>For the changes to enter into force, it is necessary to update the application parameters or to restart the application.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Для того, чтобы изменения вступили в силу, необходимо обновить параметры системы или перезапустить приложение.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<LabelDecoration name="DecorationProportion3" id="349">
+					<ContextMenu name="DecorationProportion3ContextMenu" id="350"/>
+					<ExtendedTooltip name="DecorationProportion3ExtendedTooltip" id="351"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingInventory" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory (products and services)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запасы (номенклатура)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory (products and services)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запасы (номенклатура)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingInventoryExtendedTooltip" id="270"/>
+			<ChildItems>
+				<UsualGroup name="Group1" id="99">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group1ExtendedTooltip" id="271"/>
+					<ChildItems>
+						<UsualGroup name="AccountingSettingsInDifferentUOMments" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings accounting in various units of measure</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет в различных единицах измерений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings accounting in various units of measure</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет в различных единицах измерений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="AccountingSettingsInDifferentUOMmentsExtendedTooltip" id="272">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to keep accounts of products and services in different units of measure. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция включает возможность вести учет номенклатуры в различных единицах измерения. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionAccountingInVariousUOM" id="114">
+									<DataPath>ConstantsSet.FunctionalOptionAccountingInVariousUOM</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Accounting in various units of measure</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учет в различных единицах измерения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalAccountingOptionInDifferentMeasurementUnitsContextMenu" id="115"/>
+									<ExtendedTooltip name="FunctionalOptionAccountingInDifferentMeasurementUnitsExtendedTooltip" id="273">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to keep records of products and services in various units of measure, for example, in pieces, blocks, boxes, or kilograms. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Вести учет номенклатуры в различных единицах измерения".   Эта опция определяет возможность ведения учета номенклатуры в различных единицах измерения, например в штуках, блоках, коробках или килограммах. ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingInVariousUOMOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsUseCharacteristics" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use characteristics</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать характеристики</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings use characteristics</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использовать характеристики</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseCharacteristicsExtendedTooltip" id="277">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to keep accounts of inventory, work and services by characteristics. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция позволяет вести учет запасов, работ и услуг в разрезе характеристик. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseCharacteristics" id="119">
+									<DataPath>ConstantsSet.FunctionalOptionUseCharacteristics</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by characteristics</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вести учет запасов в разрезе характеристик</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseCharacteristicsContextMenu" id="120"/>
+									<ExtendedTooltip name="FunctionalOptionUseCharacteristicsExtendedTooltip" id="278">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to keep accounts of inventory, works, and services by products and services characteristics. The characteristics are additional dimension sections; they arrange the most convenient structure of products and services. Usually additional characteristics are color, size, power, etc. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Вести учет номенклатуры в разрезе характеристик".   Опция определяет возможность учета запасов, работ и услуг в разрезе характеристик номенклатуры. Характеристики являются дополнительным разрезом аналитики и позволяют организовать структуру номенклатуры в максимально удобном виде. Обычно дополнительными характеристиками являются цвет, размер, мощность и т.п. признаки.  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseCharacteristicsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group2" id="100">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group2ExtendedTooltip" id="276"/>
+					<ChildItems>
+						<LabelDecoration name="Decoration1" id="352">
+							<Width>1</Width>
+							<ContextMenu name="Decoration1ContextMenu" id="353"/>
+							<ExtendedTooltip name="Decoration1ExtendedTooltip" id="354"/>
+						</LabelDecoration>
+						<UsualGroup name="SettingsUseBatches" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Batch using settings</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использования партий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Batch using settings</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки использования партий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseBatchesExtendedTooltip" id="281">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to specify products and services by batches. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция позволяет использовать детализацию номенклатуры по партиям. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseBatches" id="124">
+									<DataPath>ConstantsSet.FunctionalOptionUseBatches</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by batches</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учет запасов в разрезе партий</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseBatchesContextMenu" id="125"/>
+									<ExtendedTooltip name="FunctionalOptionUseBatchesExtendedTooltip" id="282">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to keep accounts of inventory by specific products and services batches. With batch accounting, each batch of the same inventory can be separately accounted in the warehouse. Batch accounting is mandatory for inventory accepted for commission, processing, or safe custody from an external counterparty. For own inventories, it is determined by the company type. IMPORTANT! Products and services batch is not an analog of inventory capitalization document and is not used to determine the cost of inventory write-off using FIFO method. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Вести учет запасов в разрезе партий".   Параметр определяет возможность учета запасов в разрезе конкретных партий номенклатуры. Партионный учет предполагает, что каждая партия одного и того же запаса может учитываться на складе отдельно. Ведение партионного учета для запасов, принятых на коммисиию, в переработку или ответственное хранение от стороннего контрагента является обязательным. Для собственных запасов определяется спецификой компании.  ВАЖНО! Партия номенклатуры не является аналогом документа оприходования запасов и не используется для определения стоимости списания товарно-материальных запасов методом FIFO.  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseBatchesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingWarehouses" id="147">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse accounting</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Складской учет</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse accounting</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Складской учет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingWarehousesExtendedTooltip" id="285"/>
+			<ChildItems>
+				<UsualGroup name="Group3" id="154">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group3ExtendedTooltip" id="286"/>
+					<ChildItems>
+						<UsualGroup name="Group7" id="370">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group7ExtendedTooltip" id="371"/>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionAccountingByMultipleWarehouses" id="148">
+									<DataPath>ConstantsSet.FunctionalOptionAccountingByMultipleWarehouses</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Keep records of several warehouses (two or more)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вести учет по нескольким складам (двум и более)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionAccountingForMultipleWarehousesContextMenu" id="149"/>
+									<ExtendedTooltip name="FunctionalOptionAccountingForMultipleWarehousesExtendedTooltip" id="287">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option if you need to keep records of several warehouses. If you enable this option, you can specify warehouses in documents.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Если требуется вести учет по нескольким складам в программном продукте, то необходимо включить эту опцию. Также включение этой опции добавляет возможность указания складов в документах.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingByMultipleWarehousesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="CatalogStructuralUnitsWarehouses" id="153">
+							<Type>Hyperlink</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.CatalogStructuralUnitsWarehouses</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Business units catalog</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справочник "Структурные единицы"</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="CatalogStructuralUnitsWarehousesExtendedTooltip" id="295">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Go to the Business units catalog with the filter by warehouses.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Переход к справочнику структурных единиц с установленным отбором по складам.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group4" id="155">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group4ExtendedTooltip" id="293"/>
+					<ChildItems>
+						<UsualGroup name="SettingsOrderWarehouse" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings two-phase warehouse</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки ордерный склад</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings two-phase warehouse</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки ордерный склад</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="OrderWarehouseSettingsExtendedTooltip" id="289">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>This option is used to split the accounting of inventory to warehouse and financial accounting. For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция определяет возможность разделения учета запасов на складской и финансовый. Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseOrderWarehouse" id="130">
+									<DataPath>ConstantsSet.FunctionalOptionUseOrderWarehouse</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use two-phase warehouse</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать ордерный склад</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseOrderWarehouseContextMenu" id="131"/>
+									<ExtendedTooltip name="FunctionalOptionUseOrderWarehouseExtendedTooltip" id="290">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to distinguish between warehouse inventory accounting and financial inventory accounting. The functionality is used when for some reason it is required to distinguish between warehouse inventory accounting and management inventory accounting. Then, to keep records of warehouse inventory, receipt and issue warehouse slips are used, as well as the document for recording inventory movements inside the warehouse (for example, for distributing delivered goods among shelves and bins, or preparing order for shipment). For management of inventory accounting financial documents are used: goods issues, inventory movement, etc. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Использовать ордерный склад (разделение складских и финансовых операций по учету запасов)".   Опция определяет возможность разделения учета запасов на складской и финансовый. Механизм используется, когда по каким-либо причинам необходимо разделить учет запасов на складе и учет запасов в управленческом контуре. Тогда для учета запасов на складе используются приходные и расходные складские ордера, а также документ для отражения перемещения запасов внутри структуры склада (например, для распределения поступивших товаров по полкам и ячейкам или комплектации заказа для отгрузки). Для учета запасов в управленческом контуре используются финансовые документы - расходные накладные, перемещения запасов и т.д.  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseOrderWarehouseOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsAccountingByCells" id="134">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings bin accounting</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет по ячейкам</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings bin accounting</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет по ячейкам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="AccountingByCellsSettingsExtendedTooltip" id="297">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Accounting of warehouse inventory by locations (lanes, racks, shelves, etc.). For more information, see the option help. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Учет запасов на складе в разрезе ячеек (проходов, стеллажей, полок и т.д.). Подробнее можно посмотреть в опциональной справке. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionAccountingByCells" id="135">
+									<DataPath>ConstantsSet.FunctionalOptionAccountingByCells</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by bins</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учет запасов по ячейкам</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionAccountingInCellsContextMenu" id="136"/>
+									<ExtendedTooltip name="FunctionalOptionAccountingInCellsExtendedTooltip" id="298">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to split inventory accounting by storage location structure. List of storage bins is specified separately for each warehouse. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>"Учет запасов на складе в разрезе ячеек (проходов, стеллажей, полок и т.д.)". Опция определяет возможность разделить учет запасов в разрезе структуры мест хранения. Перечень ячеек определяется для каждого склада отдельно. ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingByCellsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group6" id="358">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group6ExtendedTooltip" id="359"/>
+					<ChildItems>
+						<UsualGroup name="SettingsSerialNumbers" id="360">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки ордерный склад</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings two-phase warehouse</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки ордерный склад</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings two-phase warehouse</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsSerialNumbersExtendedTooltip" id="361">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>This option is used to enable serial numbers.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция позволяет включить использование серийных номеров. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseSerialNumbers" id="362">
+									<DataPath>ConstantsSet.UseSerialNumbers</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать серийные номера</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use serial numbers</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseSerialNumbersContextMenu" id="363"/>
+									<ExtendedTooltip name="FunctionalOptionUseSerialNumbersExtendedTooltip" id="364">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>&lt;b&gt;Enable this option if you need to use serial numbers of goods, both for reference (for monitoring the warranty period after the sale), and for keeping accounts of stock balances by serial numbers.Serial number is unique for each item.
+&lt;/&gt;You can use 2 modes of serial numbers:For reference: serial numbers can be specified if necessary. It is advisable to indicate the serial number when selling goods in order to state the sale and the beginning of the warranty period.Keeping accounts: serial numbers are obligatory for filling in all goods flow documents. Keeping accounts control of stock balances by serial numbers.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>&lt;b&gt;Включение позволяет использовать серийные номера товаров, как справочно (для контроля гарантийного срока после продажи), так и для учета остатков в разрезе серийных номеров.
+Серийный номер - уникальный для каждой единицы товара.
+&lt;/&gt;
+Можно использовать 2 режима серийных номеров:
+Справочно: серийные номера можно указывать при необходимости. Целесообразно указывать серийный номер при продаже товара, чтобы зафиксировать факт продажи и начало гарантийного срока.
+Учет остатков: серийные номера обязательны к заполнению во всех документах движения товаров. Ведется контроль остатков в разрезе серийных номеров.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionFunctionalOptionUseSerialNumbersOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsSerialNumbersBalanceControl" id="365">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет по ячейкам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings bin accounting</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки учет по ячейкам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Settings bin accounting</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsSerialNumbersBalanceControlExtendedTooltip" id="366">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Опция используется для контроля остатков по серийным номерам. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>The option is used to enable the monitoring of balances by serial numbers.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionSerialNumbersBalanceControl" id="367">
+									<DataPath>ConstantsSet.SerialNumbersBalanceControl</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionSerialNumbersBalanceControlContextMenu" id="368"/>
+									<ExtendedTooltip name="FunctionalOptionSerialNumbersBalanceControlExtendedTooltip" id="369">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>&lt;b&gt;Контроль остатков запасов с учетом серийных номеров. &lt;/&gt;
+Если контроль остатков ОТКЛЮЧЕН:
+Серийные номера в документах можно указывать произвольно. Достаточно указывать серийные номера в документах продажи товара, чтобы зафиксировать начало гарантийного срока.
+Если контроль остатков ВКЛЮЧЕН:
+Серийные номера нужно обязательно вводить во всех документах. Можно посмотреть, какие серийные номера есть в наличии, в момент подбора товаров или в отчетах.
+ВАЖНО!
+Возможность нельзя отключить после начала работы в программе. Необходимо провести инвентаризацию запасов с учетом серийных номеров.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>&lt;/&gt;Control of stock balances by serial numbers. &lt;/&gt;If the stock balances control is OFF:Serial numbers in documents can be specified arbitrarily. It is enough to indicate the serial numbers in the sales documents to state the beginning of the warranty period.
+If the stock balances is ON:Serial numbers must always be entered in all documents. You can see what serial numbers are available while picking goods or in reports.IMPORTANT!You can not disable the option after starting to work in the program. It is necessary to inventory stock balances taking into account serial numbers.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionSerialNumbersBalanceControlOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsReservation" id="234">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reservation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервирование</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reservation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="SettingsReservationExtendedTooltip" id="301"/>
+			<ChildItems>
+				<UsualGroup name="ReservationSettingsFO" id="240">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings reservation FO</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки резервирование ФО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings reservation FO</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки резервирование ФО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsReservationFOExtendedTooltip" id="303">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Use the inventories reservation in warehouses and in expected receipts by the purchase orders, production orders. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать резервирование запасов на складах и в ожидаемых поступлениях по заказам поставщикам, заказам на производство. Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionInventoryReservation" id="241">
+							<DataPath>ConstantsSet.FunctionalOptionInventoryReservation</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Use inventory reservation</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать резервирование запасов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionInventoryReservationContextMenu" id="242"/>
+							<ExtendedTooltip name="FunctionalOptionInventoryReservationExtendedTooltip" id="304">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to reserve inventory in warehouses, keep accounts of material and other direct costs during production against customer orders, place customers orders in open purchase orders and production orders (assembly, disassembly). IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать резервирование запасов на складах и в ожидаемых поступлениях по заказам поставщикам и заказам на производство".  Опция определяет возможность резервирования запасов на складах, учета материальных и других прямых затрат в производстве по заказам покупателей, размещение заказов покупателей в открытых заказах поставщикам и заказам на производство (сборку, разборку).  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionInventoryReservationOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="DecorationProportion" id="249">
+					<ContextMenu name="DecorationProportionContextMenu" id="250"/>
+					<ExtendedTooltip name="DecorationProportionExtendedTooltip" id="308"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="CustomerOrdersSettings" id="174">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase orders</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы поставщикам</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase orders</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы поставщикам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="CustomerOrdersSettingsExtendedTooltip" id="309"/>
+			<ChildItems>
+				<UsualGroup name="Group5" id="175">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group5ExtendedTooltip" id="310"/>
+					<ChildItems>
+						<UsualGroup name="Group8" id="372">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group8ExtendedTooltip" id="373"/>
+							<ChildItems>
+								<CheckBoxField name="UsePurchaseOrderStates" id="176">
+									<DataPath>ConstantsSet.UsePurchaseOrderStates</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Several purchase order states</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Несколько состояний заказов поставщикам</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UsePurchaseOrderStatesContextMenu" id="177"/>
+									<ExtendedTooltip name="UseVendorsOrderStatusExtendedTooltip" id="311">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Enable this option to use several purchase order states (three or more). If this option is disabled, order states are edited in the attributes below.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Включение этой опции позволяет использовать несколько состояний для заказов поставщикам (три и более). При выключенной опции состояния заказов редактируются в реквизитах ниже.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">UsePurchaseOrderStatesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group9" id="374">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group9ExtendedTooltip" id="375"/>
+							<ChildItems>
+								<Button name="CatalogCustomerOrderStates" id="192">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.CatalogPurchaseOrderStates</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Purchase order states catalog</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Справочник "Состояния заказов поставщикам"</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="CatalogCustomerOrderStatusExtendedTooltip" id="321">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Go to the "Purchase order states" catalog. Use the catalog to create arbitrary number of states of definite kinds. To go to the catalog, enable the "Several states of purchase orders" option.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переход к справочнику состояний заказов поставщиков. Справочник предназначен для самостоятельного создания произвольного количества состояний определенных видов. Для перехода к справочнику необходимо включить опцию "Несколько состояний заказов поставщиков".</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingPurchaseOrderStatesDefault" id="180">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Set up default purchase order states</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка состояния заказов поставщикам по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Set up default purchase order states</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка состояния заказов поставщикам по умолчанию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingPurchaseOrderStatesDefaultExtendedTooltip" id="313"/>
+					<ChildItems>
+						<UsualGroup name="OrdersStates" id="181">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Order states</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояния заказов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Order states</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояния заказов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="OrdersStatesExtendedTooltip" id="314"/>
+							<ChildItems>
+								<InputField name="InProcessStatus" id="184">
+									<DataPath>ConstantsSet.PurchaseOrdersInProgressStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"In progress" state</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние "в работе"</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="InProcessStatusContextMenu" id="185"/>
+									<ExtendedTooltip name="StateAtWorkExtendedTooltip" id="316"/>
+									<Events>
+										<Event name="OnChange">InProcessStatusOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="CompletedStatus" id="189">
+									<DataPath>ConstantsSet.PurchaseOrdersCompletedStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"Completed" state</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние "Выполнен"</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="CompletedStatusContextMenu" id="190"/>
+									<ExtendedTooltip name="StateCompletedExtendedTooltip" id="319"/>
+									<Events>
+										<Event name="OnChange">CompletedStatusOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Decoration2" id="355">
+							<ContextMenu name="Decoration2ContextMenu" id="356"/>
+							<ExtendedTooltip name="Decoration2ExtendedTooltip" id="357"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsSafeCustody" id="195">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Safe custody</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственное хранение</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Safe custody</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственное хранение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="SettingsSafeCustodyExtendedTooltip" id="323"/>
+			<ChildItems>
+				<UsualGroup name="SettingsReceptionProductsForSafeCustody" id="212">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings goods receipt for safe custody</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки прием товаров на ответственное хранение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings goods receipt for safe custody</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки прием товаров на ответственное хранение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsReceptionProductsForSafeCustodyExtendedTooltip" id="325">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Allows to add operations of the inventory receipt for safe custody. To use this option, enable use of products and services batches. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Позволяет вводить операции приема запасов на ответственное хранение. Для использования опции необходимо разрешить использование партий номенклатуры. Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionTakingInventoryOnResponsibleStorage" id="202">
+							<DataPath>ConstantsSet.FunctionalOptionTakingInventoryOnResponsibleStorage</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Inventory receipt for safe custody</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прием запасов на ответственное хранение</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionTakingInventoryOnResponsibleStorageContextMenu" id="203"/>
+							<ExtendedTooltip name="FunctionalOptionTakingInventoryOnResponsibleStorageExtendedTooltip" id="326">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to receive inventory from external counterparties for safe custody. IMPORTANT! To distinguish between own inventory and inventory received for safe custody, additional accounting section "Products and services batches" is used. To use this option, enable the "Inventory accounting by batches" option in the accounting settings in the "Purchases" section. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать прием запасов на ответственное хранение".   Опция определяет возможность приема запасов сторонних контрагентов на ответственное хранение.  ВАЖНО! Для отличия собственных запасов от запасов, принятых на ответственное хранение, используется дополнительный разрез учета - "Партии номенклатуры". Поэтому для использования опции необходимо в настройках учета, раздел ""Закупки"", включить опцию "Вести учет запасов в разрезе партий".  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionTakingInventoryOnResponsibleStorageOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingsTransferProductsForSafeCustody" id="200">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings goods transfer for safe custody</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки передача товаров на ответственное хранение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings goods transfer for safe custody</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки передача товаров на ответственное хранение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsTransferProductsForSafeCustodyExtendedTooltip" id="330">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Allows to add operations of the invenory transfer for safe custody. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Позволяет вводить операции передачи запасов на ответственное хранение. Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionTransferInventoryOnSafeCustody" id="206">
+							<DataPath>ConstantsSet.FunctionalOptionTransferInventoryOnSafeCustody</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Inventory transfer for safe custody</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Передача запасов на ответственное хранение</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionTransferInventoryOnResponsibleStorageContextMenu" id="207"/>
+							<ExtendedTooltip name="FunctionalOptionTransferInventoryOnResponsibleStorageExtendedTooltip" id="331">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to transfer own inventories for safe custody to external counterparties. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать передачу запасов на ответственное хранение".   Опция определяет возможность передачи собственных запасов на ответственное хранение сторонним контрагентам.  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionTransferInventoryOnSafeCustodyOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsMiscellaneous" id="215">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:TitleColorSettingsGroup</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="SettingsOtherExtendedTooltip" id="334"/>
+			<ChildItems>
+				<UsualGroup name="SettingsTransferToProcessing" id="216">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings transfer for processing</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки передача в переработку</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings transfer for processing</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки передача в переработку</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsTransferToProcessingExtendedTooltip" id="336">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Use transfer of raw materials and materials to processing. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать передачу сырья и материалов в переработку. Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="FunctionalOptionTransferRawMaterialsForProcessing" id="217">
+							<DataPath>ConstantsSet.FunctionalOptionTransferRawMaterialsForProcessing</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Transfer raw materials for processing</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Передавать сырье и материалы в переработку</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="FunctionalOptionTransferRawMaterialsForProcessingContextMenu" id="218"/>
+							<ExtendedTooltip name="FunctionalOptionTransferRawMaterialsForProcessingExtendedTooltip" id="337">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to transfer own raw materials to external counterparties for manufacturing of products or processing. IMPORTANT! Key parameter. You cannot disable this option if there is accounting data in the application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Использовать передачу сырья и материалов в переработку".  Опция определяет возможность передачи собственного сырья и материалов сторонним контрагентам для изготовления продукции или переработки.  ВАЖНО! Параметр является ключевым. При наличии в системе учетных данных отключение этой опции невозможно.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionTransferRawMaterialsForProcessingOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingsVendorPaymentDueDate" id="221">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings period of payment to the supplier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки срок оплаты поставщику</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings period of payment to the supplier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки срок оплаты поставщику</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsTermOfVendorPaymentExtendedTooltip" id="341">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Parameter determines default delay of payment to supplier. To be specified in days. For more information, see the option help. </v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Параметр определяет период отсрочки платежа поставщику по умолчанию. Указывается в сутках Подробнее можно посмотреть в опциональной справке. </v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<InputField name="VendorPaymentDueDate" id="222">
+							<DataPath>ConstantsSet.VendorPaymentDueDate</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content> Date of payment to supplier (in days)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> Срок оплаты поставщику (в сутках)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<Width>8</Width>
+							<Wrap>false</Wrap>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="TermOfPaymentVendorContextMenu" id="223"/>
+							<ExtendedTooltip name="TermOfVendorPaymentExtendedTooltip" id="342">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enable this option to specify the default payable deferral period to supplier in days. It is used to automatically insert counterparty into an agreement and determine a payment date during payment planning.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Срок оплаты поставщику (по умолчанию)".   Опция определяет срок отсрочки платежа поставщику по умолчанию, в сутках. Он используется для автоматической подстановки в договор контрагента и для определения даты оплаты при планировании платежей.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">VendorPaymentDueDateOnChange</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ConstantsSet" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Constant set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ConstantsSet.VendorPaymentDueDate</Field>
+				<Field>ConstantsSet.UsePurchaseOrderStates</Field>
+				<Field>ConstantsSet.SubsidiaryCompany</Field>
+				<Field>ConstantsSet.PurchaseOrdersInProgressStatus</Field>
+				<Field>ConstantsSet.PurchaseOrdersCompletedStatus</Field>
+				<Field>ConstantsSet.ProductsAndServicesSKUInContent</Field>
+				<Field>ConstantsSet.PriceListShowFullDescr.Ref</Field>
+				<Field>ConstantsSet.PriceListShowCode.Ref</Field>
+				<Field>ConstantsSet.PostponeEditProhibitionDate.Ref</Field>
+				<Field>ConstantsSet.OffsetAdvancesDebtsAutomatically.Ref</Field>
+				<Field>ConstantsSet.NationalCurrency</Field>
+				<Field>ConstantsSet.InfobaseUsageMode.Ref</Field>
+				<Field>ConstantsSet.FunctionalOptionUseBudgeting</Field>
+				<Field>ConstantsSet.FunctionalOptionUseBatches</Field>
+				<Field>ConstantsSet.FunctionalOptionTransferInventoryOnSafeCustody</Field>
+				<Field>ConstantsSet.FunctionalOptionTakingInventoryOnResponsibleStorage</Field>
+				<Field>ConstantsSet.FunctionalOptionInventoryReservation</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingRetail</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingCashMethodIncomeAndExpenses</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingByProjects</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingByMultipleWarehouses</Field>
+				<Field>ConstantsSet.FunctionalOptionAccountingByCells</Field>
+				<Field>ConstantsSet.FunctionalCurrencyTransactionsAccounting</Field>
+				<Field>ConstantsSet.ExchangeRateDifferencesCalculationFrequency.Ref</Field>
+				<Field>ConstantsSet.DiscountsMarkupsSharedUsageOptions.Ref</Field>
+				<Field>ConstantsSet.DeleteContractControllingOnPosting.Ref</Field>
+				<Field>ConstantsSet.ControlBalancesOnPosting</Field>
+				<Field>ConstantsSet.ArchiveCRReceiptsOnCloseCashCRSession</Field>
+				<Field>ConstantsSet.ActivityKind.Ref</Field>
+				<Field>ConstantsSet.AccountingCurrency</Field>
+				<Field>ConstantsSet.AccountingBySubsidiaryCompany</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="RunMode" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run mode</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="CatalogStructuralUnitsWarehouses" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Business units catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник "Структурные единицы"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the "Business units (warehouses)" catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник "Структурные единицы (склады)"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogStructuralUnitsWarehouses</Action>
+		</Command>
+		<Command name="CatalogPurchaseOrderStates" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase order states catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник "Состояния заказов поставщикам"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the "Purchase order states" catalog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть справочник "Состояния заказов поставщикам"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogPurchaseOrderStates</Action>
+		</Command>
+		<Command name="UpdateSystemParameters" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить параметры системы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить параметры системы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>UpdateSystemParameters</Action>
+		</Command>
+	</Commands>
+</Form>
